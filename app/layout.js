@@ -1,11 +1,12 @@
+import './globals.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
-import './globals.css';
 
 export const metadata = {
-  title: 'Royal Track Building & Contracting LLC',
-  description: 'Premium construction services in UAE',
+  title: 'Royal Track Building & Contracting L.L.C',
+  description: 'Premium construction and contracting services in Dubai, UAE - A subsidiary of Royal Tech Group',
+  keywords: 'construction, dubai, uae, building, contracting, interior fit-out, pools, landscaping, royal track',
 };
 
 export default function RootLayout({ children }) {
@@ -14,8 +15,8 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         <main>{children}</main>
-        <Footer />
         <FloatingButtons />
+        <Footer />
       </body>
     </html>
   );
