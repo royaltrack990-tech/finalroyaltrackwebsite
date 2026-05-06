@@ -13,7 +13,7 @@ export default function Header() {
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-3">
             <img
-              src="/images/roya_track_final_logo.png"
+              src="/images/roya_track_full_logo.png"
               alt="Royal Track"
               className="h-28 w-auto"
             />
