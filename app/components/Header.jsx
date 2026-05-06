@@ -39,7 +39,7 @@ export default function Header() {
             { label: 'Home', href: '/' },
             { label: 'About', href: '/about' },
             { label: 'Services', href: '/services' },
-            { label: 'Projects', href: '/#projects' },
+            { label: 'Projects', href: '/projects' },
             { label: 'Contact Us', href: '/#contact' },
           ].map((item) => (
             <Link 
