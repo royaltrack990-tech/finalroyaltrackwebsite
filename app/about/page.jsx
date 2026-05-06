@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import InquiryForm from '../components/InquiryForm';
 
 const IMG = {
   kitchen_marble: '/images/kitchen_marble.jpg',
@@ -347,6 +348,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* INQUIRY FORM */}
+      <InquiryForm />
     </div>
   );
 }
