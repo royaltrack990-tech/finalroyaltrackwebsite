@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   const IMG = {
-    logo: '/images/roya_track_final_logo.png',
+    logo: '/images/roya_track_full_logo.png',
   };
 
   return (
