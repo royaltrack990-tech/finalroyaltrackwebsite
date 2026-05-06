@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Column 1: Logo & About */}
           <div className="lg:col-span-1">
             <img
-              src="/images/roya_track_final_logo.png"
+              src="/images/roya_track_full_logo.png"
               alt="Royal Track"
               className="h-24 w-auto mb-4"
             />
