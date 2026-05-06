@@ -6,87 +6,82 @@ import Link from "next/link";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const IMG = {
+    logo: '/images/roya_track_full_logo.png',
+  };
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50" style={{ background: 'rgba(0,0,0,0.95)' }}>
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo Section */}
-          <Link href="/" className="flex items-center gap-3">
-            <img
-              src="/images/roya_track_full_logo.png"
-              alt="Royal Track"
-              className="h-28 w-auto"
-            />
-            <div className="hidden md:flex flex-col">
-              <span className="text-white text-base font-bold">
-                Building & Contracting L.L.C
-              </span>
-              <span className="text-[#E8B92C] text-base font-bold" dir="rtl">
-                رويال تراك للمقاولات البناء ش.ذ.م.م
-              </span>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            <Link href="/" className="text-white hover:text-[#E8B92C] text-sm font-medium uppercase tracking-wider transition-colors">
-              Home
-            </Link>
-            <Link href="/about" className="text-white hover:text-[#E8B92C] text-sm font-medium uppercase tracking-wider transition-colors">
-              About
-            </Link>
-            <Link href="/services" className="text-white hover:text-[#E8B92C] text-sm font-medium uppercase tracking-wider transition-colors">
-              Services
-            </Link>
-            <Link href="/projects" className="text-white hover:text-[#E8B92C] text-sm font-medium uppercase tracking-wider transition-colors">
-              Projects
-            </Link>
-            <Link href="/#contact" className="px-6 py-2.5 bg-[#E8B92C] hover:bg-[#C9831A] text-stone-900 text-sm font-bold uppercase tracking-wider transition-all duration-300 rounded-full">
-              Get Quote
-            </Link>
+    <nav 
+      className="fixed top-0 left-0 right-0 z-50"
+      style={{
+        backgroundColor: 'rgba(0, 0, 0, 0.95)',
+        backdropFilter: 'blur(20px)',
+        borderBottom: '1px solid rgba(232, 185, 44, 0.3)',
+      }}
+    >
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-3 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-3 group">
+          <img 
+            src={IMG.logo} 
+            alt="Royal Track Logo" 
+            className="h-28 w-auto object-contain" 
+          />
+          
+          <div className="leading-tight text-white">
+            <div className="font-display text-xl font-bold tracking-wide">ROYAL TRACK</div>
+            <div className="text-base font-bold uppercase tracking-[0.1em] text-[#E8B92C] mt-1">Building & Contracting L.L.C</div>
+            <div className="text-base font-bold tracking-wide text-[#E8B92C] mt-1" dir="rtl">رويال تراك للمقاولات البناء ش.ذ.م.م</div>
           </div>
+        </Link>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden text-white p-2"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
+        <div className="hidden lg:flex items-center gap-8 text-white">
+          {[
+            { label: 'Home', href: '/' },
+            { label: 'About', href: '/about' },
+            { label: 'Services', href: '/services' },
+            { label: 'Projects', href: '/#projects' },
+            { label: 'Contact Us', href: '/#contact' },
+          ].map((item) => (
+            <Link 
+              key={item.label}
+              href={item.href}
+              className="text-lg font-bold tracking-wide hover:text-[#E8B92C] transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#E8B92C] hover:after:w-full after:transition-all after:duration-300"
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
 
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-white/10 pt-4">
-            <div className="flex flex-col gap-4">
-              <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-white hover:text-[#E8B92C] text-sm font-medium uppercase tracking-wider">
-                Home
-              </Link>
-              <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-white hover:text-[#E8B92C] text-sm font-medium uppercase tracking-wider">
-                About
-              </Link>
-              <Link href="/services" onClick={() => setMobileMenuOpen(false)} className="text-white hover:text-[#E8B92C] text-sm font-medium uppercase tracking-wider">
-                Services
-              </Link>
-              <Link href="/projects" onClick={() => setMobileMenuOpen(false)} className="text-white hover:text-[#E8B92C] text-sm font-medium uppercase tracking-wider">
-                Projects
-              </Link>
-              <Link href="/#contact" onClick={() => setMobileMenuOpen(false)} className="inline-block px-6 py-2.5 bg-[#E8B92C] text-stone-900 text-sm font-bold uppercase tracking-wider rounded-full text-center">
-                Get Quote
-              </Link>
-            </div>
-          </div>
-        )}
+        <Link href="/#contact" className="hidden lg:flex items-center gap-2 px-6 py-3 bg-[#E8B92C] hover:bg-[#C9831A] text-stone-900 transition-all duration-300 text-sm font-extrabold uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl hover:scale-105">
+          GET QUOTE →
+        </Link>
+
+        <button 
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="lg:hidden p-2 text-white"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            {mobileMenuOpen ? <path d="M6 6l12 12M6 18L18 6" /> : <path d="M3 6h18M3 12h18M3 18h18" />}
+          </svg>
+        </button> 
       </div>
+       
+      {mobileMenuOpen && (
+        <div className="lg:hidden bg-black/95 border-t border-[#E8B92C]/30">
+          <div className="px-6 py-6 space-y-4">
+            {['Home', 'About', 'Services', 'Projects', 'Contact Us'].map((item) => (
+              <Link 
+                key={item}
+                href={item === 'Home' ? '/' : item === 'About' ? '/about' : item === 'Services' ? '/services' : `/#${item.toLowerCase().replace(' ', '-')}`}
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-white text-xl font-bold hover:text-[#E8B92C] transition-colors"
+              >
+                {item}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}  
     </nav>
   );
 }
