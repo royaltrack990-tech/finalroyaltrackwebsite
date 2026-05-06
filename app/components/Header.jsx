@@ -7,7 +7,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const IMG = {
-    logo: '/images/roya_track_full_logo.png',
+    logo: '/images/roya_track_final_logo.png',
   };
 
   return (
