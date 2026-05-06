@@ -26,7 +26,7 @@ export default function Footer() {
             <div className="text-xs font-bold uppercase tracking-widest text-[#E8B92C] mb-5">Navigation</div>
             <div className="space-y-3">
               {['Home', 'About', 'Services', 'Projects', 'Contact Us'].map((link) => (
-                <Link key={link} href={link === 'Home' ? '/' : link === 'About' ? '/about' : link === 'Services' ? '/services' : `/#${link.toLowerCase().replace(' ', '-')}`} className="block text-white/70 hover:text-[#E8B92C] text-sm transition-colors">
+                <Link key={link} href={link === 'Home' ? '/' : link === 'About' ? '/about' : link === 'Services' ? '/services' : link === 'Projects' ? '/projects' : '/#contact'} className="block text-white/70 hover:text-[#E8B92C] text-sm transition-colors">
                   {link}
                 </Link>
               ))}
@@ -35,11 +35,33 @@ export default function Footer() {
 
           <div>
             <div className="text-xs font-bold uppercase tracking-widest text-[#E8B92C] mb-5">Contact</div>
-            <div className="space-y-3 text-sm text-white/70">
-              <div className="break-all">Info@royaltrack.ae</div>
-              <div>+971 4 393 4374</div>
-              <div>+971 5 5282 4492</div>
-              <div>13 45A St - Al Muraqqabat, Dubai, UAE</div>
+            <div className="space-y-3 text-sm">
+              <a 
+                href="mailto:Info@royaltrack.ae" 
+                className="block text-white/70 hover:text-[#E8B92C] transition-colors underline decoration-white/30 hover:decoration-[#E8B92C]"
+              >
+                Info@royaltrack.ae
+              </a>
+              <a 
+                href="tel:+97143934374" 
+                className="block text-white/70 hover:text-[#E8B92C] transition-colors underline decoration-white/30 hover:decoration-[#E8B92C]"
+              >
+                +971 4 393 4374
+              </a>
+              <a 
+                href="tel:+971552824492" 
+                className="block text-white/70 hover:text-[#E8B92C] transition-colors underline decoration-white/30 hover:decoration-[#E8B92C]"
+              >
+                +971 5 5282 4492
+              </a>
+              <a 
+                href="https://maps.google.com/?q=13+45A+St+Al+Muraqqabat+Dubai+UAE" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-white/70 hover:text-[#E8B92C] transition-colors underline decoration-white/30 hover:decoration-[#E8B92C]"
+              >
+                13 45A St - Al Muraqqabat, Dubai, UAE
+              </a>
             </div>
           </div>
         </div>
