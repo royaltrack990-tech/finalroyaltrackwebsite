@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function InquiryForm() {
   const [formData, setFormData] = useState({
@@ -105,10 +105,10 @@ export default function InquiryForm() {
               value={formData.message}
               onChange={handleChange}
               required
-              rows="5"
+              rows={5}
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#E8B92C] transition-colors resize-none"
               placeholder="Tell us about your project..."
-            ></textarea>
+            />
           </div>
 
           <div className="text-center">
