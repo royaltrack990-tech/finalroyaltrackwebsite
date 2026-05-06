@@ -242,7 +242,7 @@ export default function AboutPage() {
               Powered by <span className="gold-gradient">Royal Tech Group</span>
             </h2>
             <p className="text-stone-600 text-sm max-w-2xl mx-auto leading-relaxed">
-              A proud subsidiary of Royal Tech Group — delivering excellence across oil & gas, trading, and construction sectors throughout UAE and Oman.
+              A proud subsidiary of Royal Tech Group — delivering excellence across oil & gas, trading, and construction sectors throughout UAE, Oman, and Nine other countries world wide.
             </p>
           </div>
 
