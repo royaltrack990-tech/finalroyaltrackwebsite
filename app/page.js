@@ -95,9 +95,9 @@ export default function RoyalTrackHome() {
               <img src={IMG.kitchen_marble} alt="Royal Track" className="w-full aspect-[4/5] object-cover" />
             </div>
             <div className="p-8">
-              <p className="text-stone-700 text-lg leading-relaxed mb-6">
-                At <strong className="text-stone-900">Royal Track Building & Contracting L.L.C</strong>, a proud subsidiary of <strong className="text-[#E8B92C]">Royal Tech Group</strong>, we don't just build structures. We create spaces that define modern living and luxury.
-              </p>
+            <p className="text-stone-700 text-lg leading-relaxed mb-6">
+  At <strong className="text-stone-900">Royal Track Building & Contracting L.L.C</strong>, a proud subsidiary of <a href="https://royal-techgroup.com/" target="_blank" rel="noopener noreferrer" className="text-[#E8B92C] font-bold hover:text-[#C9831A] underline transition-colors">Royal Tech Group</a>, we don't just build structures. We create spaces that define modern living and luxury.
+</p>
               <p className="text-stone-600 text-base leading-relaxed mb-8">
                 Driven by deep expertise and passionate commitment to excellence, we bring together innovative design, superior craftsmanship, and flawless execution.
               </p>
