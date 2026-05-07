@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import InquiryForm from '../components/InquiryForm';
 
 const PROJECTS = [
   {
@@ -13,7 +14,7 @@ const PROJECTS = [
     images: ['/images/dubai_hills.png', '/images/dubai_hills.png', '/images/dubai_hills.png', '/images/dubai_hills.png'],
     description: 'Luxury villa with premium interior fit-out and landscaped pool',
     fullDescription: 'Experience the epitome of luxury living with our comprehensive villa transformation. This project showcases premium interior design, state-of-the-art MEP systems, and exquisite landscaping with an infinity pool.',
-    services: ['Interior Fit-Out', 'Pool & Landscaping', 'Turnkey', 'MEP Works'],
+    services: ['Interior Fit-Out', 'Pool & Landscaping', 'Turnkey', 'MEP Works'], 
     size: 'large',
   },
   {
@@ -630,6 +631,9 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
+
+      {/* ============ INQUIRY FORM ============ */}
+      <InquiryForm />
 
       {/* ============ PROJECT DETAIL MODAL ============ */}
       {selectedProject && (
