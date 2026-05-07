@@ -16,10 +16,10 @@ const IMG = {
   project_4: '/images/project_4.jpg',
   turnkey: '/images/turnkey.png',
   dubai_hills: '/images/dubai_hills.png',
-  royal_tech_group: '/images/R tech group LLC oman.png',
-  royal_tech_ofs: '/images/Royal Tech 1.png',
-  royal_tech_ogt: '/images/Royal Track 02.png',
-  royal_tech_igt: '/images/Royal Track 3.png',
+  royal_tech_group: '/images/R_tech_group_LLC_oman.png',
+  royal_tech_ofs: '/images/Royal_Tech_1.png',
+  royal_tech_ogt: '/images/Royal_Track_02.png',
+  royal_tech_igt: '/images/Royal_Track_3.png',
 };
 
 export default function AboutPage() {
@@ -49,23 +49,19 @@ export default function AboutPage() {
           mix-blend-mode: multiply;
         }
 
-        @keyframes scroll-left {
+        @keyframes scroll-continuous {
           0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          100% { transform: translateX(-33.333%); }
         }
-        
-        .scroll-container {
-          display: flex;
-          animation: scroll-left 30s linear infinite;
+
+        .animate-scroll-continuous {
+          animation: scroll-continuous 15s linear infinite;
         }
-        
-        .scroll-container:hover {
-          animation-play-state: paused;
-        }
-        
-        .logo-item {
-          flex-shrink: 0;
-          margin: 0 2rem;
+
+        @media (max-width: 768px) {
+          .animate-scroll-continuous {
+            animation: scroll-continuous 12s linear infinite;
+          }
         }
       `}</style>
 
@@ -102,7 +98,7 @@ export default function AboutPage() {
                 Where Vision Meets <span className="gold-gradient">Precision</span>
               </h2>
               <p className="text-stone-700 text-base leading-relaxed mb-4">
-                At <strong className="font-bold text-stone-900">Royal Track Building & Contracting L.L.C</strong>, we don't just build structures — we create spaces that define modern living and luxury. As a proud subsidiary of <strong className="font-bold text-[#E8B92C]">Royal Tech Group</strong>, we bring together decades of expertise, innovation, and an unwavering commitment to excellence.
+                At <strong className="font-bold text-stone-900">Royal Track Building & Contracting L.L.C</strong>, we don't just build structures — we create spaces that define modern living and luxury. As a proud subsidiary of <a href="https://royal-techgroup.com/" target="_blank" rel="noopener noreferrer" className="font-bold text-[#E8B92C] hover:text-[#C9831A] underline transition-colors">Royal Tech Group</a>, we bring together decades of expertise, innovation, and an unwavering commitment to excellence.
               </p>
               <p className="text-stone-600 text-sm leading-relaxed mb-4">
                 From refined interiors to striking exteriors and complete outdoor transformations, every project is delivered with meticulous attention to detail, superior craftsmanship, and lasting performance.
@@ -246,50 +242,18 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="relative bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 rounded-2xl py-12 overflow-hidden">
-            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-stone-900 to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-stone-900 to-transparent z-10" />
-            
-            <div className="overflow-hidden">
-              <div className="scroll-container">
-                {[...Array(2)].map((_, setIdx) => (
-                  <React.Fragment key={setIdx}>
-                    {[
-                      { name: 'Royal Tech Group', image: IMG.royal_tech_group, subtitle: 'Parent Company' },
-                      { name: 'Oil & Gas Field Services', image: IMG.royal_tech_ofs, subtitle: 'ROFS LLC' },
-                      { name: 'Oil & Gas Trading', image: IMG.royal_tech_ogt, subtitle: 'ROGT FZC' },
-                      { name: 'Integrated General Trading', image: IMG.royal_tech_igt, subtitle: 'RIGT' },
-                    ].map((partner, idx) => (
-                      <div key={`${setIdx}-${idx}`} className="logo-item">
-                        <div className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:border-[#E8B92C] transition-all duration-500 hover:bg-white/10 w-56">
-                          <div className="bg-white rounded-lg p-3 mb-3 h-28 flex items-center justify-center">
-                            <img 
-                              src={partner.image} 
-                              alt={partner.name} 
-                              className="max-w-full max-h-full object-contain logo-transparent group-hover:scale-110 transition-transform duration-500"
-                            />
-                          </div>
-                          <div className="text-center">
-                            <div className="text-[10px] font-bold uppercase tracking-wider text-[#E8B92C] mb-1">{partner.subtitle}</div>
-                            <div className="text-xs text-white/80 font-medium">{partner.name}</div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </React.Fragment>
-                ))}
-              </div>
-            </div>
-
-            <div className="text-center mt-8">
-              <a 
-                href="https://royal-techgroup.com/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#E8B92C] hover:text-[#FFD700] text-xs font-bold uppercase tracking-wider transition-all hover:gap-3"
-              >
-                Visit Royal Tech Group →
-              </a>
+          {/* Logo Slider - Continuous + Color */}
+          <div className="relative overflow-hidden py-8">
+            <div className="flex animate-scroll-continuous">
+              {[...Array(3)].map((_, setIndex) => (
+                <div key={setIndex} className="flex gap-12 px-6">
+                  {[IMG.royal_tech_group, IMG.royal_tech_ofs, IMG.royal_tech_ogt, IMG.royal_tech_igt].map((logo, idx) => (
+                    <div key={idx} className="flex-shrink-0 w-56 h-36 flex items-center justify-center bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                      <img src={logo} alt="Royal Tech Group" className="max-w-[85%] max-h-[85%] object-contain" />
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
         </div>
