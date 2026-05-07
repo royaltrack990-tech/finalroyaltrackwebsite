@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import InquiryForm from '../components/InquiryForm';
 
 const IMG = {
   logo: '/images/royal-track-logo-transparent.png',
@@ -255,10 +256,8 @@ export default function ServicesPage() {
                   {service.images.map((img, imgIdx) => (
                     <img 
                       key={imgIdx} 
-                      src={img} //images.map(img, imgIdx) =>  
-                      alt={service.title} // <dic className= "grid grid-cols-1 md: grid-color-2 lg:grid-cols-3 gap-8"
-                      //ces.map (service,idx) => imgIdx ? 'opacity' object-cover_box bg-white border border-stone-200 overflow-hidden
-                      // group curved-box
+                      src={img}
+                      alt={service.title}
                       className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
                         (activeSlides[idx] || 0) === imgIdx ? 'opacity-100' : 'opacity-0'
                       }`}
@@ -351,6 +350,9 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      {/* INQUIRY FORM */}
+      <InquiryForm />
 
       {/* CTA SECTION */}
       <section className="py-24 bg-stone-900 text-white">
