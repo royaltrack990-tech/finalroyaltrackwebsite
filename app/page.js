@@ -55,6 +55,14 @@ export default function RoyalTrackHome() {
 
       {/* HERO SLIDER */}
       <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden">
+        {/* Floating GET QUOTE button - top right of hero */}
+        <a
+          href="#contact"
+          className="absolute top-6 right-6 lg:top-8 lg:right-12 z-20 px-7 py-3 bg-[#E8B92C] hover:bg-[#C9831A] text-stone-900 text-xs font-bold uppercase tracking-[0.15em] rounded-full shadow-xl transition-all duration-300 hover:scale-105"
+        >
+          Get Quote →
+        </a>
+
         {slides.map((slide, index) => (
           <div key={index} className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}>
             <img src={slide.image} alt={slide.service} className="w-full h-full object-cover" />
