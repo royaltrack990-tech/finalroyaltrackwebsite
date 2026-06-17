@@ -70,24 +70,22 @@ export default function Header() {
       <nav
         className="fixed top-0 left-0 right-0 z-40"
         style={{
-          backgroundColor: 'rgba(0, 0, 0, 0.95)',
+          backgroundColor: 'rgba(41, 37, 36, 0.97)',
           backdropFilter: 'blur(20px)',
           borderBottom: '1px solid rgba(232, 185, 44, 0.3)',
         }}
       >
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-2 flex items-center justify-between">
-          {/* Logo - light background patch behind it so it's visible on dark header */}
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-            <div className="bg-white rounded-xl px-3 py-1.5 shadow-md">
-              <img
-                src={IMG.logo}
-                alt="Royal Track Logo"
-                className="h-12 w-auto object-contain"
-                style={{ imageRendering: 'auto' }}
-                width={603}
-                height={556}
-              />
-            </div>
+            <img
+              src={IMG.logo}
+              alt="Royal Track Logo"
+              className="h-16 w-auto object-contain"
+              style={{ imageRendering: 'auto' }}
+              width={603}
+              height={556}
+            />
           </Link>
 
           {/* Desktop Nav - elegant spaced serif style */}
