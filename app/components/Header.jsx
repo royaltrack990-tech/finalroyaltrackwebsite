@@ -76,16 +76,18 @@ export default function Header() {
         }}
       >
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-2 flex items-center justify-between">
-          {/* Logo - higher resolution render to avoid blur */}
+          {/* Logo - light background patch behind it so it's visible on dark header */}
           <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-            <img
-              src={IMG.logo}
-              alt="Royal Track Logo"
-              className="h-16 w-auto object-contain"
-              style={{ imageRendering: 'auto' }}
-              width={603}
-              height={556}
-            />
+            <div className="bg-white rounded-xl px-3 py-1.5 shadow-md">
+              <img
+                src={IMG.logo}
+                alt="Royal Track Logo"
+                className="h-12 w-auto object-contain"
+                style={{ imageRendering: 'auto' }}
+                width={603}
+                height={556}
+              />
+            </div>
           </Link>
 
           {/* Desktop Nav - elegant spaced serif style */}
