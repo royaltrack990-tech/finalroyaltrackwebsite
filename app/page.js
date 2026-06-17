@@ -89,7 +89,7 @@ export default function RoyalTrackHome() {
       `}</style>
 
       {/* Sticky social icons - top right, fixed below header, visible on scroll */}
-      <div className="fixed top-[102px] right-6 lg:right-12 z-30 hidden md:flex items-center gap-3 bg-stone-900/70 backdrop-blur-sm px-4 py-2.5 rounded-full">
+      <div className="fixed top-[130px] right-6 lg:right-12 z-30 hidden md:flex items-center gap-3 bg-stone-900/70 backdrop-blur-sm px-4 py-2.5 rounded-full">
         {socialLinks.map((social) => (
           <a
             key={social.name}
