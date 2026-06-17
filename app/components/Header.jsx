@@ -66,27 +66,9 @@ export default function Header() {
 
   return (
     <>
-      {/* ── TOP BAR: social icons only, right aligned, plain no-border style, sticky on scroll ── */}
-      <div className="fixed top-0 left-0 right-0 z-50 hidden lg:block bg-stone-950">
-        <div className="max-w-[1600px] mx-auto px-12 flex items-center justify-end gap-5" style={{ height: '38px' }}>
-          {socialLinks.map((social) => (
-            <a
-              key={social.name}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={social.name}
-              className="text-white/70 hover:text-[#E8B92C] transition-all duration-200 hover:scale-110"
-            >
-              {social.icon}
-            </a>
-          ))}
-        </div>
-      </div>
-
       {/* ── MAIN NAV ── */}
       <nav
-        className="fixed left-0 right-0 z-40 lg:top-[38px] top-0"
+        className="fixed top-0 left-0 right-0 z-40"
         style={{
           backgroundColor: 'rgba(0, 0, 0, 0.95)',
           backdropFilter: 'blur(20px)',
@@ -248,7 +230,7 @@ export default function Header() {
       </nav>
 
       {/* Spacer so page content isn't hidden behind fixed header */}
-      <div className="h-[58px] lg:h-[96px]" />
+      <div className="h-[72px]" />
     </>
   );
 }
