@@ -192,6 +192,61 @@ export default function RoyalTrackHome() {
         </div>
       </section>
 
+      {/* WHY CHOOSE ROYAL TRACK SECTION */}
+      <section className="py-20 bg-stone-50">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
+          <div className="text-center mb-16">
+            <span className="text-[#C9831A] text-xs font-bold uppercase tracking-[0.3em]">OUR EXPERTISE</span>
+            <h2 className="font-display text-4xl md:text-5xl text-stone-900 mt-4">Why Choose <span className="gold-gradient">Royal Track</span></h2>
+            <p className="text-stone-600 text-base lg:text-lg mt-6 max-w-3xl mx-auto leading-relaxed">
+              When it comes to construction and contracting services in Dubai and the UAE, Royal Track stands apart through a relentless focus on quality, transparency, and on-time delivery. Here's what makes our clients trust us with their most important projects.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: '15+ Years of Experience', desc: 'Over a decade of proven excellence in interior fit-out, pool design, landscaping, and turnkey construction across the UAE.' },
+              { title: 'Award-Winning Projects', desc: 'Completed premium projects in Arabian Ranches, Dubai Hills, The Valley, Tilal Al Ghaf, Al Jurf, and Yas Island communities.' },
+              { title: 'Expert In-House Team', desc: 'Qualified engineers, architects, designers, and skilled craftsmen working under one roof for seamless project execution.' },
+              { title: 'Premium Quality Materials', desc: 'We source only high-grade, durable materials from trusted suppliers, ensuring long-lasting finishes on every project.' },
+              { title: 'On-Time Delivery', desc: 'Structured project management and milestone tracking ensure your project is completed within the agreed timeline.' },
+              { title: 'Transparent Pricing', desc: 'Detailed, itemized quotes with no hidden costs. Know exactly what you are paying for from day one.' },
+            ].map((item, idx) => (
+              <div key={idx} className="curved-box bg-white border border-stone-200 p-8 hover:border-[#E8B92C] hover:shadow-lg transition-all duration-300">
+                <h3 className="font-display text-2xl mb-3 text-stone-900">{item.title}</h3>
+                <p className="text-stone-600 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* OUR PROCESS SECTION */}
+      <section className="py-20 bg-white">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
+          <div className="text-center mb-16">
+            <span className="text-[#C9831A] text-xs font-bold uppercase tracking-[0.3em]">HOW WE WORK</span>
+            <h2 className="font-display text-4xl md:text-5xl text-stone-900 mt-4">Our <span className="gold-gradient">Process</span></h2>
+            <p className="text-stone-600 text-base lg:text-lg mt-6 max-w-3xl mx-auto leading-relaxed">
+              From the first conversation to project handover, our streamlined process keeps you informed and in control at every stage.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { num: '01', title: 'Consultation & Planning', desc: 'We meet to understand your vision, requirements, and budget, then create a tailored project roadmap.' },
+              { num: '02', title: 'Design & Approval', desc: 'Our designers prepare detailed concepts and 3D visualizations for your review and approval before any work begins.' },
+              { num: '03', title: 'Expert Execution', desc: 'Our skilled team executes with precision using premium materials and strict quality standards throughout.' },
+              { num: '04', title: 'Quality Check & Handover', desc: 'Final inspection, walkthrough, and handover with full documentation and ongoing customer support.' },
+            ].map((step) => (
+              <div key={step.num} className="curved-box bg-stone-50 border border-stone-200 p-8 hover:shadow-lg transition-all duration-300">
+                <div className="text-5xl font-bold text-[#E8B92C] mb-4">{step.num}</div>
+                <h3 className="font-display text-xl mb-3 text-stone-900">{step.title}</h3>
+                <p className="text-stone-600 text-sm leading-relaxed">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* PROJECTS PREVIEW */}
       <section className="py-20 bg-stone-50">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
@@ -219,6 +274,51 @@ export default function RoyalTrackHome() {
           </div>
           <div className="text-center">
             <Link href="/projects" className="inline-flex items-center gap-3 px-8 py-4 bg-stone-900 hover:bg-[#E8B92C] hover:text-stone-900 text-white text-sm font-bold uppercase tracking-wider rounded-full">VIEW ALL PROJECTS →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CLIENT TESTIMONIALS SECTION */}
+      <section className="py-20 bg-white">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
+          <div className="text-center mb-16">
+            <span className="text-[#C9831A] text-xs font-bold uppercase tracking-[0.3em]">CLIENT FEEDBACK</span>
+            <h2 className="font-display text-4xl md:text-5xl text-stone-900 mt-4">What Our <span className="gold-gradient">Clients Say</span></h2>
+            <p className="text-stone-600 text-base lg:text-lg mt-6 max-w-3xl mx-auto leading-relaxed">
+              We're proud of the relationships we've built with homeowners and businesses across Dubai. Here's what some of our clients have shared about working with Royal Track.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                text: "Royal Track transformed our villa with an exceptional interior fit-out. The team's professionalism, attention to detail, and quality of finish were outstanding. Highly recommended for anyone looking for premium contracting services in Dubai.",
+                author: "Ahmed Hassan",
+                project: "Villa Interior Fit-Out — Arabian Ranches",
+              },
+              {
+                text: "The landscaping and pool design exceeded our expectations. The entire project was completed on time and within the agreed budget. Our outdoor space is now the favourite part of our home.",
+                author: "Fatima Al Mansouri",
+                project: "Pool & Landscaping — Dubai Hills",
+              },
+              {
+                text: "We engaged Royal Track for a complete commercial fit-out. Their turnkey solution made the entire process seamless and stress-free. Excellent communication from start to finish.",
+                author: "Mohammed Al Rashid",
+                project: "Commercial Fit-Out — Downtown Dubai",
+              },
+            ].map((review, idx) => (
+              <div key={idx} className="curved-box bg-stone-50 border border-stone-200 p-8 hover:shadow-lg transition-all duration-300">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-xl text-[#E8B92C]">★</span>
+                  ))}
+                </div>
+                <p className="text-stone-600 text-sm leading-relaxed mb-6 italic">"{review.text}"</p>
+                <div className="border-t border-stone-200 pt-4">
+                  <p className="font-bold text-stone-900">{review.author}</p>
+                  <p className="text-stone-500 text-xs mt-1">{review.project}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
