@@ -44,24 +44,12 @@ const socialLinks = [
 ];
 
 const serviceItems = [
-  { title: 'Interior Renovation', icon: '🏠' },
-  { title: 'Exterior Renovation', icon: '🏗️' },
-  { title: 'Pool Construction', icon: '🏊' },
-  { title: 'Landscaping & Gardens', icon: '🌿' },
-  { title: 'Turnkey Solutions', icon: '🔑' },
-  { title: 'Aluminum Work', icon: '🔩' },
-  { title: 'Pergola & Shade Structures', icon: '⛱️' },
-  { title: 'Electrical Works', icon: '⚡' },
-  { title: 'AC & Ducting', icon: '❄️' },
-  { title: 'Fencing & Gates', icon: '🚪' },
-  { title: 'Waterproofing', icon: '💧' },
-  { title: 'Flooring & Tiling', icon: '🧱' },
-  { title: 'Painting & Finishing', icon: '🎨' },
-  { title: 'MEP Works', icon: '🔧' },
-  { title: 'Plants Sale & Supply', icon: '🪴' },
-  { title: 'Irrigation Systems', icon: '🚿' },
-  { title: 'Outdoor Lighting', icon: '💡' },
-  { title: 'Civil Works', icon: '🏛️' },
+  'Interior Renovation', 'Exterior Renovation', 'Pool Construction',
+  'Landscaping & Gardens', 'Turnkey Solutions', 'Aluminum Work',
+  'Pergola & Shade Structures', 'Electrical Works', 'AC & Ducting',
+  'Fencing & Gates', 'Waterproofing', 'Flooring & Tiling',
+  'Painting & Finishing', 'MEP Works', 'Plants Sale & Supply',
+  'Irrigation Systems', 'Outdoor Lighting', 'Civil Works',
 ];
 
 export default function Header() {
@@ -106,18 +94,25 @@ export default function Header() {
         }}
       >
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-2 flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo - higher resolution render to avoid blur */}
           <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-            <img src={IMG.logo} alt="Royal Track Logo" className="h-14 w-auto object-contain" />
+            <img
+              src={IMG.logo}
+              alt="Royal Track Logo"
+              className="h-16 w-auto object-contain"
+              style={{ imageRendering: 'auto' }}
+              width={603}
+              height={556}
+            />
           </Link>
 
-          {/* Desktop Nav - elegant spaced uppercase style */}
+          {/* Desktop Nav - elegant spaced serif style */}
           <div className="hidden lg:flex items-center gap-10">
             {navItems.slice(0, 1).map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-[13px] font-medium uppercase tracking-[0.18em] text-stone-300 hover:text-[#E8B92C] transition-all duration-300"
+                className="font-display text-[13px] font-medium uppercase tracking-[0.22em] text-stone-300 hover:text-[#E8B92C] transition-all duration-300"
               >
                 {item.label}
               </Link>
@@ -129,8 +124,14 @@ export default function Header() {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className="text-[13px] font-medium uppercase tracking-[0.18em] text-stone-300 hover:text-[#E8B92C] transition-all duration-300 flex items-center gap-1.5">
+              <button className="font-display text-[13px] font-medium uppercase tracking-[0.22em] text-stone-300 hover:text-[#E8B92C] transition-all duration-300 flex items-center gap-1.5">
                 Services
+                <svg
+                  width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
+                  className={`transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`}
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
               </button>
 
               <div
@@ -138,16 +139,16 @@ export default function Header() {
                   servicesOpen ? 'opacity-100 visible scale-100 translate-y-0' : 'opacity-0 invisible scale-95 -translate-y-2'
                 }`}
               >
-                <div className="grid grid-cols-3 gap-2 p-6">
+                <div className="grid grid-cols-3 gap-1 p-6">
                   {serviceItems.map((service) => (
                     <Link
-                      key={service.title}
+                      key={service}
                       href="/services"
-                      className="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-stone-50 transition-colors group"
+                      className="flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-stone-50 transition-colors group"
                     >
-                      <span className="text-2xl flex-shrink-0">{service.icon}</span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#E8B92C] flex-shrink-0" />
                       <span className="text-stone-700 text-sm font-medium group-hover:text-[#C9831A] transition-colors leading-tight">
-                        {service.title}
+                        {service}
                       </span>
                     </Link>
                   ))}
@@ -164,18 +165,11 @@ export default function Header() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-[13px] font-medium uppercase tracking-[0.18em] text-stone-300 hover:text-[#E8B92C] transition-all duration-300"
+                className="font-display text-[13px] font-medium uppercase tracking-[0.22em] text-stone-300 hover:text-[#E8B92C] transition-all duration-300"
               >
                 {item.label}
               </Link>
             ))}
-
-            <Link
-              href="/#contact"
-              className="flex items-center gap-2 px-6 py-2.5 bg-[#E8B92C] hover:bg-[#C9831A] text-stone-900 transition-all duration-300 text-[11px] font-bold uppercase tracking-[0.18em] rounded-full shadow-lg hover:shadow-xl hover:scale-105"
-            >
-              Get Quote →
-            </Link>
           </div>
 
           {/* Mobile Hamburger */}
@@ -206,12 +200,12 @@ export default function Header() {
                 <div className="grid grid-cols-1 gap-2 pl-2 max-h-[220px] overflow-y-auto">
                   {serviceItems.map((service) => (
                     <Link
-                      key={service.title}
+                      key={service}
                       href="/services"
                       onClick={() => setMobileMenuOpen(false)}
                       className="flex items-center gap-2 text-white/70 text-sm hover:text-[#E8B92C] transition-colors"
                     >
-                      <span>{service.icon}</span> {service.title}
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#E8B92C]" /> {service}
                     </Link>
                   ))}
                 </div>
