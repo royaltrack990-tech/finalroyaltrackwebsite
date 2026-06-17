@@ -76,16 +76,21 @@ export default function Header() {
         }}
       >
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-2 flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo with English + Arabic text - matches original design */}
           <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
             <img
               src={IMG.logo}
               alt="Royal Track Logo"
-              className="h-16 w-auto object-contain"
+              className="h-20 w-auto object-contain"
               style={{ imageRendering: 'auto' }}
               width={603}
               height={556}
             />
+            <div className="leading-tight text-white hidden md:block">
+              <div className="font-display text-lg font-bold tracking-wide">ROYAL TRACK</div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#E8B92C] mt-1">Building & Contracting L.L.C</div>
+              <div className="text-[12px] font-bold tracking-wide text-[#E8B92C] mt-1" dir="rtl">رويال تراك للمقاولات البناء ش.ذ.م.م</div>
+            </div>
           </Link>
 
           {/* Desktop Nav - elegant spaced serif style */}
@@ -230,7 +235,7 @@ export default function Header() {
       </nav>
 
       {/* Spacer so page content isn't hidden behind fixed header */}
-      <div className="h-[72px]" />
+      <div className="h-[90px]" />
     </>
   );
 }
