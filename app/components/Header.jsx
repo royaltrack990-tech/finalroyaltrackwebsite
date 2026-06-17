@@ -66,9 +66,9 @@ export default function Header() {
 
   return (
     <>
-      {/* ── TOP BAR: social icons only, right aligned ── */}
-      <div className="fixed top-0 left-0 right-0 z-50 hidden lg:block bg-stone-950 border-b border-white/5">
-        <div className="max-w-[1600px] mx-auto px-12 flex items-center justify-end gap-2" style={{ height: '38px' }}>
+      {/* ── TOP BAR: social icons only, right aligned, plain no-border style, sticky on scroll ── */}
+      <div className="fixed top-0 left-0 right-0 z-50 hidden lg:block bg-stone-950">
+        <div className="max-w-[1600px] mx-auto px-12 flex items-center justify-end gap-5" style={{ height: '38px' }}>
           {socialLinks.map((social) => (
             <a
               key={social.name}
@@ -76,7 +76,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={social.name}
-              className="w-7 h-7 flex items-center justify-center rounded-md border border-white/15 text-white/70 hover:text-[#E8B92C] hover:border-[#E8B92C] transition-all duration-200"
+              className="text-white/70 hover:text-[#E8B92C] transition-all duration-200 hover:scale-110"
             >
               {social.icon}
             </a>
@@ -170,6 +170,13 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+
+            <Link
+              href="/#contact"
+              className="flex items-center gap-2 px-6 py-2.5 bg-[#E8B92C] hover:bg-[#C9831A] text-stone-900 transition-all duration-300 text-[11px] font-bold uppercase tracking-[0.18em] rounded-full shadow-lg hover:shadow-xl hover:scale-105"
+            >
+              Get Quote →
+            </Link>
           </div>
 
           {/* Mobile Hamburger */}
