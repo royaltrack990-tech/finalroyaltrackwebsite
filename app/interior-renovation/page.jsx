@@ -36,7 +36,7 @@ const IMG = {
   // Services
   services_01: '/images/services_01.jpg',
   services_02: '/images/services_02.jpg',
-  services_03: '/images/services_03.jpg',
+  services_03: '/images/service_03.jpg',
   services_04: '/images/services_04.jpg',
   services_05: '/images/services_05.jpg',
   services_06: '/images/services_06.jpg',
