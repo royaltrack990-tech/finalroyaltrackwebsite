@@ -66,12 +66,12 @@ const IMG = {
   after_01: '/images/after_01.png',
   before_01: '/images/before_01.png',
 
-  // Benefits section (Services images)
-  benefits_1: '/images/Services 1.png',
-  benefits_2: '/images/Services 2.png',
-  benefits_3: '/images/Services 3.png',
-  benefits_4: '/images/Services 4.png',
-  benefits_5: '/images/Services 5.png',
+  // Benefits section
+  benefits_1: '/images/Services_1.png',
+  benefits_2: '/images/Services_2.png',
+  benefits_3: '/images/Services_3.png',
+  benefits_4: '/images/Services_4.png',
+  benefits_5: '/images/Services_5.png',
 
   // Areas (existing)
   dubai_hills: '/images/dubai_hills.png',
@@ -146,15 +146,15 @@ export default function InteriorRenovationPage() {
 
   // ===== PROJECTS =====
   const projects = [
-    { img: IMG.project_1, title: 'Luxury Villa Interior Renovation Dubai', area: 'Emirates Hills' },
-    { img: IMG.project_2, title: 'Modern Apartment Renovation Dubai', area: 'Downtown Dubai' },
-    { img: IMG.project_3, title: 'Premium Kitchen Renovation Dubai', area: 'Palm Jumeirah' },
-    { img: IMG.project_4, title: 'Master Bedroom Renovation Dubai', area: 'Arabian Ranches' },
-    { img: IMG.project_5, title: 'Luxury Bathroom Renovation Dubai', area: 'Dubai Marina' },
-    { img: IMG.project_6, title: 'Living Room Interior Design Dubai', area: 'Business Bay' },
-    { img: IMG.project_7, title: 'Office Interior Fit-Out Dubai', area: 'Business Bay' },
-    { img: IMG.project_8, title: 'Premium Dining Room Renovation Dubai', area: 'Dubai Hills' },
-    { img: IMG.project_9, title: 'Luxury Master Suite Renovation Dubai', area: 'JVC' },
+    { img: IMG.project_1, title: 'Luxury Living Room Renovation Dubai', area: 'Emirates Hills' },
+    { img: IMG.project_2, title: 'Premium Kitchen Renovation Dubai', area: 'Downtown Dubai' },
+    { img: IMG.project_3, title: 'Grand Majlis Interior Design Dubai', area: 'Palm Jumeirah' },
+    { img: IMG.project_4, title: 'Modern Lounge Interior Renovation Dubai', area: 'Arabian Ranches' },
+    { img: IMG.project_5, title: 'Marble Kitchen & Dining Renovation Dubai', area: 'Dubai Marina' },
+    { img: IMG.project_6, title: 'Contemporary Kitchen Fit-Out Dubai', area: 'Business Bay' },
+    { img: IMG.project_7, title: 'Modern Living Room Renovation Dubai', area: 'JVC' },
+    { img: IMG.project_8, title: 'Luxury Dining Room Renovation Dubai', area: 'Dubai Hills' },
+    { img: IMG.project_9, title: 'Master Bedroom Renovation Dubai', area: 'Al Barsha' },
   ];
 
   // ===== FAQ =====
@@ -467,11 +467,6 @@ export default function InteriorRenovationPage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3">
-                    <span className="inline-block px-2.5 py-1 bg-[#E8B92C] text-stone-900 text-[9px] font-bold uppercase tracking-widest rounded-full">
-                      Dubai & UAE
-                    </span>
-                  </div>
                 </div>
                 <div className="p-6">
                   <h3 className="font-display text-base md:text-lg mb-2 text-stone-900 group-hover:text-[#C9831A] transition-colors font-bold">
