@@ -23,17 +23,34 @@ import InquiryForm from '../components/InquiryForm';
  */
 
 const IMG = {
-  hero1: '/images/kitchen_gold.jpg',
-  hero2: '/images/living_marble.jpg',
-  hero3: '/images/kitchen_marble.jpg',
-  hero4: '/images/living_modern.jpg',
+  // Hero
+  hero1: '/images/hero_image.jpg',
+  hero2: '/images/hero_imagee.jpg',
+  hero3: '/images/hero_imageee.jpg',
+  hero4: '/images/hero_imageeee.jpg',
 
-  kitchen_gold: '/images/kitchen_gold.jpg',
-  kitchen_marble: '/images/kitchen_marble.jpg',
-  living_marble: '/images/living_marble.jpg',
-  living_modern: '/images/living_modern.jpg',
-  turnkey: '/images/turnkey.png',
+  // About
+  about_us: '/images/about_us.jpg',
+  about_uss: '/images/about_uss.jpg',
 
+  // Services
+  services_01: '/images/services_01.jpg',
+  services_02: '/images/services_02.jpg',
+  services_03: '/images/services_03.jpg',
+  services_04: '/images/services_04.jpg',
+  services_05: '/images/services_05.jpg',
+  services_06: '/images/services_06.jpg',
+  services_07: '/images/services_07.jpg',
+  services_08: '/images/services_08.jpg',
+  services_09: '/images/services_09.jpg',
+
+  // Reasons to choose
+  choose_01: '/images/choose_01.jpg',
+  choose_02: '/images/choose_02.jpg',
+  choose_03: '/images/choose_03.jpg',
+  choose_04: '/images/choose_04.jpg',
+
+  // Projects (existing)
   project_1: '/images/project_1.jpg',
   project_2: '/images/project_2.jpg',
   project_3: '/images/project_3.jpg',
@@ -42,6 +59,7 @@ const IMG = {
   project_6: '/images/project_6.jpg',
   project_7: '/images/project_7.jpg',
 
+  // Areas (existing)
   dubai_hills: '/images/dubai_hills.png',
   arabian_ranches: '/images/arabian_ranches1.jpg',
   jvc: '/images/jvc.jpg',
@@ -50,6 +68,13 @@ const IMG = {
   jumeirah_village: '/images/Jumeirah_Village_triangle.jpg',
   al_jurf: '/images/al_jurf.jpeg',
   talal_al_ghaf: '/images/talal_al_ghaf.jpg',
+
+  // Other (existing - used in benefits, hire us sections)
+  kitchen_gold: '/images/kitchen_gold.jpg',
+  kitchen_marble: '/images/kitchen_marble.jpg',
+  living_marble: '/images/living_marble.jpg',
+  living_modern: '/images/living_modern.jpg',
+  turnkey: '/images/turnkey.png',
 };
 
 export default function InteriorRenovationPage() {
@@ -76,23 +101,23 @@ export default function InteriorRenovationPage() {
 
   // ===== INTERIOR SERVICES =====
   const interiorServices = [
-    { title: 'Villa Renovation Dubai', image: IMG.living_marble, description: 'Complete villa interior renovation Dubai services for luxury homes in Emirates Hills, Palm Jumeirah, Arabian Ranches, and Dubai Hills.', features: ['Full Villa Makeover', 'Luxury Finishes', 'Smart Home Integration', '3D Design Preview'] },
-    { title: 'Home Renovation Dubai', image: IMG.living_modern, description: 'Premium home renovation Dubai services for townhouses and family homes — single-room makeovers to complete home interior renovation Dubai.', features: ['Full Home Renovation', 'Custom Joinery', 'Modern Finishes', 'Project Management'] },
-    { title: 'Apartment Renovation Dubai', image: IMG.kitchen_marble, description: 'Apartment interior renovation Dubai — Downtown, Marina, JBR, Business Bay. Smart and stylish renovations that maximize space and add value.', features: ['Space Optimization', 'Modern Layouts', 'Premium Materials', 'Quick Turnaround'] },
-    { title: 'Kitchen Renovation Dubai', image: IMG.kitchen_gold, description: 'Premium kitchen renovation Dubai — modular kitchens, custom cabinetry, quartz & marble countertops, and German-grade appliances installation.', features: ['Modular Kitchens', 'Quartz Countertops', 'Premium Appliances', 'Custom Cabinetry'] },
-    { title: 'Bathroom Renovation Dubai', image: IMG.kitchen_marble, description: 'Bathroom renovation Dubai with premium tiling, sanitary ware, vanity units, and waterproofing. Luxury bathroom renovation Dubai across villas and apartments.', features: ['Luxury Tiling', 'Premium Sanitaryware', 'Waterproofing', 'Vanity Installation'] },
-    { title: 'Bedroom Renovation Dubai', image: IMG.living_marble, description: 'Bedroom renovation Dubai — master, kids, and guest rooms. Custom wardrobes, premium flooring, and elegant interior renovation Dubai design.', features: ['Custom Wardrobes', 'Premium Flooring', 'Mood Lighting', 'Acoustic Solutions'] },
-    { title: 'Living Room Renovation Dubai', image: IMG.living_modern, description: 'Transform your living room with Royal Track\'s premium interior renovation Dubai services — false ceilings, custom TV units, wall panels, and luxury furniture.', features: ['False Ceilings', 'Wall Cladding', 'Custom TV Units', 'Designer Lighting'] },
-    { title: 'Office & Commercial Interior Dubai', image: IMG.turnkey, description: 'Commercial interior renovation Dubai for offices, retail showrooms, restaurants & clinics. Modern office fit-out and branded interior renovation Dubai design.', features: ['Glass Partitions', 'Office Fit-Out', 'Branded Interiors', 'MEP & HVAC'] },
-    { title: 'Hotel & Restaurant Interior Dubai', image: IMG.kitchen_gold, description: 'Luxury hotel interior renovation Dubai — boutique hotels to fine-dining restaurants. Hospitality-grade interior renovation Dubai fit-out across UAE.', features: ['Hospitality Design', 'Luxury Finishes', 'Lighting Design', 'Custom Furniture'] },
+    { title: 'Villa Renovation Dubai', image: IMG.services_01, description: 'Complete villa interior renovation Dubai services for luxury homes in Emirates Hills, Palm Jumeirah, Arabian Ranches, and Dubai Hills.', features: ['Full Villa Makeover', 'Luxury Finishes', 'Smart Home Integration', '3D Design Preview'] },
+    { title: 'Home Renovation Dubai', image: IMG.services_02, description: 'Premium home renovation Dubai services for townhouses and family homes — single-room makeovers to complete home interior renovation Dubai.', features: ['Full Home Renovation', 'Custom Joinery', 'Modern Finishes', 'Project Management'] },
+    { title: 'Apartment Renovation Dubai', image: IMG.services_03, description: 'Apartment interior renovation Dubai — Downtown, Marina, JBR, Business Bay. Smart and stylish renovations that maximize space and add value.', features: ['Space Optimization', 'Modern Layouts', 'Premium Materials', 'Quick Turnaround'] },
+    { title: 'Kitchen Renovation Dubai', image: IMG.services_04, description: 'Premium kitchen renovation Dubai — modular kitchens, custom cabinetry, quartz & marble countertops, and German-grade appliances installation.', features: ['Modular Kitchens', 'Quartz Countertops', 'Premium Appliances', 'Custom Cabinetry'] },
+    { title: 'Bathroom Renovation Dubai', image: IMG.services_05, description: 'Bathroom renovation Dubai with premium tiling, sanitary ware, vanity units, and waterproofing. Luxury bathroom renovation Dubai across villas and apartments.', features: ['Luxury Tiling', 'Premium Sanitaryware', 'Waterproofing', 'Vanity Installation'] },
+    { title: 'Bedroom Renovation Dubai', image: IMG.services_06, description: 'Bedroom renovation Dubai — master, kids, and guest rooms. Custom wardrobes, premium flooring, and elegant interior renovation Dubai design.', features: ['Custom Wardrobes', 'Premium Flooring', 'Mood Lighting', 'Acoustic Solutions'] },
+    { title: 'Living Room Renovation Dubai', image: IMG.services_07, description: 'Transform your living room with Royal Track\'s premium interior renovation Dubai services — false ceilings, custom TV units, wall panels, and luxury furniture.', features: ['False Ceilings', 'Wall Cladding', 'Custom TV Units', 'Designer Lighting'] },
+    { title: 'Office & Commercial Interior Dubai', image: IMG.services_08, description: 'Commercial interior renovation Dubai for offices, retail showrooms, restaurants & clinics. Modern office fit-out and branded interior renovation Dubai design.', features: ['Glass Partitions', 'Office Fit-Out', 'Branded Interiors', 'MEP & HVAC'] },
+    { title: 'Hotel & Restaurant Interior Dubai', image: IMG.services_09, description: 'Luxury hotel interior renovation Dubai — boutique hotels to fine-dining restaurants. Hospitality-grade interior renovation Dubai fit-out across UAE.', features: ['Hospitality Design', 'Luxury Finishes', 'Lighting Design', 'Custom Furniture'] },
   ];
 
   // ===== REASONS TO CHOOSE US =====
   const reasonsTabs = [
-    { label: 'Premium Materials', title: 'Materials That Last Long', description: 'We only use the finest quality materials for our interior renovation Dubai services. Our team prioritizes the health and safety of our clients. That is why we make sure that you get non-toxic and premium materials for every interior renovation Dubai upgrade.', points: ['Improved lifespan of modifications', 'Better indoor air quality', 'Health-friendly and VOC-free', 'No compromise of style'], image: IMG.kitchen_marble },
-    { label: 'Quality Workmanship', title: 'Craftsmanship You Can Trust', description: 'Royal Track\'s interior renovation Dubai team consists of seasoned craftsmen and certified contractors. Every interior renovation Dubai project is executed with precision, attention to detail, and uncompromising quality control standards.', points: ['Certified expert craftsmen', 'Daily quality inspections', '10-year workmanship warranty', 'Snag-free final handover'], image: IMG.living_marble },
-    { label: 'Affordable Packages', title: 'Premium Quality at Fair Prices', description: 'Our interior renovation Dubai packages are designed to deliver premium results without breaking the bank. We offer transparent, itemized pricing for every interior renovation Dubai project — no hidden fees, no surprises, just honest value.', points: ['Transparent itemized quotes', 'Flexible payment plans', 'No hidden costs ever', 'Best price-quality ratio in Dubai'], image: IMG.turnkey },
-    { label: 'Custom Solutions', title: 'Tailored to Your Lifestyle', description: 'Every interior renovation Dubai project is unique. Our in-house design team creates fully customized interior renovation Dubai solutions tailored to your taste, lifestyle, and the architecture of your property.', points: ['Personalized 3D design previews', 'Custom-made joinery & furniture', 'Bespoke material selection', 'Lifestyle-based space planning'], image: IMG.kitchen_gold },
+    { label: 'Premium Materials', title: 'Materials That Last Long', description: 'We only use the finest quality materials for our interior renovation Dubai services. Our team prioritizes the health and safety of our clients. That is why we make sure that you get non-toxic and premium materials for every interior renovation Dubai upgrade.', points: ['Improved lifespan of modifications', 'Better indoor air quality', 'Health-friendly and VOC-free', 'No compromise of style'], image: IMG.choose_01 },
+    { label: 'Quality Workmanship', title: 'Craftsmanship You Can Trust', description: 'Royal Track\'s interior renovation Dubai team consists of seasoned craftsmen and certified contractors. Every interior renovation Dubai project is executed with precision, attention to detail, and uncompromising quality control standards.', points: ['Certified expert craftsmen', 'Daily quality inspections', '10-year workmanship warranty', 'Snag-free final handover'], image: IMG.choose_02 },
+    { label: 'Affordable Packages', title: 'Premium Quality at Fair Prices', description: 'Our interior renovation Dubai packages are designed to deliver premium results without breaking the bank. We offer transparent, itemized pricing for every interior renovation Dubai project — no hidden fees, no surprises, just honest value.', points: ['Transparent itemized quotes', 'Flexible payment plans', 'No hidden costs ever', 'Best price-quality ratio in Dubai'], image: IMG.choose_03 },
+    { label: 'Custom Solutions', title: 'Tailored to Your Lifestyle', description: 'Every interior renovation Dubai project is unique. Our in-house design team creates fully customized interior renovation Dubai solutions tailored to your taste, lifestyle, and the architecture of your property.', points: ['Personalized 3D design previews', 'Custom-made joinery & furniture', 'Bespoke material selection', 'Lifestyle-based space planning'], image: IMG.choose_04 },
     { label: 'Fast Delivery', title: 'On-Time, Every Time', description: 'Time is money. Royal Track\'s interior renovation Dubai team strictly adheres to project timelines. Most interior renovation Dubai projects are delivered on schedule, often ahead of deadline, without sacrificing quality.', points: ['Strict project milestones', 'Dedicated project manager', 'Daily progress updates', '95% on-time completion rate'], image: IMG.project_1 },
   ];
 
@@ -286,7 +311,7 @@ export default function InteriorRenovationPage() {
               <div className="relative">
                 <div className="curved-box overflow-hidden shadow-2xl aspect-[4/5]">
                   <img
-                    src={IMG.living_modern}
+                    src={IMG.about_us}
                     alt="Leading Interior Renovation Contractors In Dubai - Royal Track luxury interior"
                     className="w-full h-full object-cover"
                   />
@@ -300,7 +325,7 @@ export default function InteriorRenovationPage() {
               <div className="absolute -bottom-10 right-0 w-[50%] hidden md:block">
                 <div className="curved-box overflow-hidden shadow-2xl aspect-[5/4] border-8 border-white">
                   <img
-                    src={IMG.kitchen_gold}
+                    src={IMG.about_uss}
                     alt="Royal Track interior renovation Dubai team meeting with clients"
                     className="w-full h-full object-cover"
                   />
