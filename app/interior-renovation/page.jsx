@@ -24,31 +24,31 @@ import InquiryForm from '../components/InquiryForm';
 
 const IMG = {
   // Hero
-  hero1: '/images/hero_image.jpg',
-  hero2: '/images/hero_imagee.jpg',
-  hero3: '/images/hero_imageee.jpg',
-  hero4: '/images/hero_imageeee.jpg',
+  hero1: '/images/hero_image.png',
+  hero2: '/images/hero_imagee.png',
+  hero3: '/images/hero_imageee.png',
+  hero4: '/images/hero_imageeee.png',
 
   // About
-  about_us: '/images/about_us.jpg',
+  about_us: '/images/about_us.png',
   about_uss: '/images/about_uss.jpg',
 
   // Services
   services_01: '/images/services_01.jpg',
-  services_02: '/images/services_02.jpg',
-  services_03: '/images/service_03.jpg',
-  services_04: '/images/services_04.jpg',
-  services_05: '/images/services_05.jpg',
-  services_06: '/images/services_06.jpg',
-  services_07: '/images/services_07.jpg',
-  services_08: '/images/services_08.jpg',
-  services_09: '/images/services_09.jpg',
+  services_02: '/images/services_02.webp',
+  services_03: '/images/service_03.png',
+  services_04: '/images/services_04.png',
+  services_05: '/images/services_05.png',
+  services_06: '/images/services_06.png',
+  services_07: '/images/services_07.png',
+  services_08: '/images/services_08.png',
+  services_09: '/images/services_09.png',
 
   // Reasons to choose
-  choose_01: '/images/choose_01.jpg',
-  choose_02: '/images/choose_02.jpg',
-  choose_03: '/images/choose_03.jpg',
-  choose_04: '/images/choose_04.jpg',
+  choose_01: '/images/choose_01.png',
+  choose_02: '/images/choose_02.png',
+  choose_03: '/images/choose_03.png',
+  choose_04: '/images/choose_04.png',
 
   // Projects (existing)
   project_1: '/images/project_1.jpg',
