@@ -49,15 +49,29 @@ const IMG = {
   choose_02: '/images/choose_02.png',
   choose_03: '/images/choose_03.png',
   choose_04: '/images/choose_04.png',
+  choose_05: '/images/choose_05.png',
 
-  // Projects (existing)
-  project_1: '/images/project_1.jpg',
-  project_2: '/images/project_2.jpg',
-  project_3: '/images/project_3.jpg',
-  project_4: '/images/project_4.jpg',
-  project_5: '/images/project_5.jpg',
-  project_6: '/images/project_6.jpg',
-  project_7: '/images/project_7.jpg',
+  // Projects (all .png)
+  project_1: '/images/project_1.png',
+  project_2: '/images/project_2.png',
+  project_3: '/images/project_3.png',
+  project_4: '/images/project_4.png',
+  project_5: '/images/project_5.png',
+  project_6: '/images/project_6.png',
+  project_7: '/images/project_7.png',
+  project_8: '/images/project_8.png',
+  project_9: '/images/project_9.png',
+
+  // Before/After
+  after_01: '/images/after_01.png',
+  before_01: '/images/before_01.png',
+
+  // Benefits section (Services images)
+  benefits_1: '/images/Services 1.png',
+  benefits_2: '/images/Services 2.png',
+  benefits_3: '/images/Services 3.png',
+  benefits_4: '/images/Services 4.png',
+  benefits_5: '/images/Services 5.png',
 
   // Areas (existing)
   dubai_hills: '/images/dubai_hills.png',
@@ -118,16 +132,16 @@ export default function InteriorRenovationPage() {
     { label: 'Quality Workmanship', title: 'Craftsmanship You Can Trust', description: 'Royal Track\'s interior renovation Dubai team consists of seasoned craftsmen and certified contractors. Every interior renovation Dubai project is executed with precision, attention to detail, and uncompromising quality control standards.', points: ['Certified expert craftsmen', 'Daily quality inspections', '10-year workmanship warranty', 'Snag-free final handover'], image: IMG.choose_02 },
     { label: 'Affordable Packages', title: 'Premium Quality at Fair Prices', description: 'Our interior renovation Dubai packages are designed to deliver premium results without breaking the bank. We offer transparent, itemized pricing for every interior renovation Dubai project — no hidden fees, no surprises, just honest value.', points: ['Transparent itemized quotes', 'Flexible payment plans', 'No hidden costs ever', 'Best price-quality ratio in Dubai'], image: IMG.choose_03 },
     { label: 'Custom Solutions', title: 'Tailored to Your Lifestyle', description: 'Every interior renovation Dubai project is unique. Our in-house design team creates fully customized interior renovation Dubai solutions tailored to your taste, lifestyle, and the architecture of your property.', points: ['Personalized 3D design previews', 'Custom-made joinery & furniture', 'Bespoke material selection', 'Lifestyle-based space planning'], image: IMG.choose_04 },
-    { label: 'Fast Delivery', title: 'On-Time, Every Time', description: 'Time is money. Royal Track\'s interior renovation Dubai team strictly adheres to project timelines. Most interior renovation Dubai projects are delivered on schedule, often ahead of deadline, without sacrificing quality.', points: ['Strict project milestones', 'Dedicated project manager', 'Daily progress updates', '95% on-time completion rate'], image: IMG.project_1 },
+    { label: 'Fast Delivery', title: 'On-Time, Every Time', description: 'Time is money. Royal Track\'s interior renovation Dubai team strictly adheres to project timelines. Most interior renovation Dubai projects are delivered on schedule, often ahead of deadline, without sacrificing quality.', points: ['Strict project milestones', 'Dedicated project manager', 'Daily progress updates', '95% on-time completion rate'], image: IMG.choose_05 },
   ];
 
   // ===== BENEFITS TABS =====
   const benefitsTabs = [
-    { label: 'Improved Functionality', title: 'Improved Functionality', description: 'Royal Track believes in providing interior renovation Dubai design and renovation services that increase the practicality of any place. We make sure that every interior renovation Dubai modification offers more than just beauty.', bullets: ['Smart integrations for easy living', 'Hidden storage solutions', 'Maximum utilization of available space', 'Proper lighting, plumbing & electrical wiring'], image: IMG.kitchen_gold },
-    { label: 'Enhanced Comfort', title: 'Enhanced Comfort', description: 'A truly successful interior renovation Dubai project makes your home feel more comfortable every single day. Our interior renovation Dubai designs elevate comfort with premium materials, smart climate control, and ergonomic spatial planning.', bullets: ['Premium climate control & AC zoning', 'Ergonomic furniture placement', 'Acoustic insulation for peace & quiet', 'Soft, mood-based ambient lighting'], image: IMG.living_modern },
-    { label: 'Renewed Style', title: 'Renewed Style', description: 'Interior renovation Dubai is your chance to refresh your home aesthetic completely. Royal Track\'s interior renovation Dubai designers blend modern trends with timeless elegance, giving your space a renewed, sophisticated style.', bullets: ['Modern design trends for 2026', 'Timeless yet contemporary aesthetics', 'Premium finishes & textures', 'Personalized color palettes'], image: IMG.kitchen_marble },
-    { label: 'Energy Efficiency', title: 'Energy Efficiency', description: 'Our interior renovation Dubai upgrades go beyond aesthetics — they help reduce your monthly utility bills. From energy-efficient LED lighting to thermal insulation, every interior renovation Dubai detail is optimized for sustainability.', bullets: ['LED lighting throughout the space', 'Thermal-efficient windows & doors', 'Smart thermostats & home automation', 'Lower DEWA / electricity bills'], image: IMG.turnkey },
-    { label: 'Health Benefits', title: 'Health Benefits', description: 'Royal Track\'s interior renovation Dubai team uses only non-toxic, VOC-free materials. Our interior renovation Dubai approach prioritizes indoor air quality, natural light, and ventilation — for a healthier, happier home.', bullets: ['Non-toxic, VOC-free paints & adhesives', 'Improved indoor air quality (IAQ)', 'Maximized natural light & ventilation', 'Allergen-resistant flooring options'], image: IMG.living_marble },
+    { label: 'Improved Functionality', title: 'Improved Functionality', description: 'Royal Track believes in providing interior renovation Dubai design and renovation services that increase the practicality of any place. We make sure that every interior renovation Dubai modification offers more than just beauty.', bullets: ['Smart integrations for easy living', 'Hidden storage solutions', 'Maximum utilization of available space', 'Proper lighting, plumbing & electrical wiring'], image: IMG.benefits_1 },
+    { label: 'Enhanced Comfort', title: 'Enhanced Comfort', description: 'A truly successful interior renovation Dubai project makes your home feel more comfortable every single day. Our interior renovation Dubai designs elevate comfort with premium materials, smart climate control, and ergonomic spatial planning.', bullets: ['Premium climate control & AC zoning', 'Ergonomic furniture placement', 'Acoustic insulation for peace & quiet', 'Soft, mood-based ambient lighting'], image: IMG.benefits_2 },
+    { label: 'Renewed Style', title: 'Renewed Style', description: 'Interior renovation Dubai is your chance to refresh your home aesthetic completely. Royal Track\'s interior renovation Dubai designers blend modern trends with timeless elegance, giving your space a renewed, sophisticated style.', bullets: ['Modern design trends for 2026', 'Timeless yet contemporary aesthetics', 'Premium finishes & textures', 'Personalized color palettes'], image: IMG.benefits_3 },
+    { label: 'Energy Efficiency', title: 'Energy Efficiency', description: 'Our interior renovation Dubai upgrades go beyond aesthetics — they help reduce your monthly utility bills. From energy-efficient LED lighting to thermal insulation, every interior renovation Dubai detail is optimized for sustainability.', bullets: ['LED lighting throughout the space', 'Thermal-efficient windows & doors', 'Smart thermostats & home automation', 'Lower DEWA / electricity bills'], image: IMG.benefits_4 },
+    { label: 'Health Benefits', title: 'Health Benefits', description: 'Royal Track\'s interior renovation Dubai team uses only non-toxic, VOC-free materials. Our interior renovation Dubai approach prioritizes indoor air quality, natural light, and ventilation — for a healthier, happier home.', bullets: ['Non-toxic, VOC-free paints & adhesives', 'Improved indoor air quality (IAQ)', 'Maximized natural light & ventilation', 'Allergen-resistant flooring options'], image: IMG.benefits_5 },
   ];
 
   // ===== PROJECTS =====
@@ -139,8 +153,8 @@ export default function InteriorRenovationPage() {
     { img: IMG.project_5, title: 'Luxury Bathroom Renovation Dubai', area: 'Dubai Marina' },
     { img: IMG.project_6, title: 'Living Room Interior Design Dubai', area: 'Business Bay' },
     { img: IMG.project_7, title: 'Office Interior Fit-Out Dubai', area: 'Business Bay' },
-    { img: IMG.kitchen_marble, title: 'Marble Kitchen Renovation Dubai', area: 'Dubai Hills' },
-    { img: IMG.living_marble, title: 'Designer Living Room Dubai', area: 'Jumeirah' },
+    { img: IMG.project_8, title: 'Premium Dining Room Renovation Dubai', area: 'Dubai Hills' },
+    { img: IMG.project_9, title: 'Luxury Master Suite Renovation Dubai', area: 'JVC' },
   ];
 
   // ===== FAQ =====
@@ -245,7 +259,7 @@ export default function InteriorRenovationPage() {
       `}</style>
 
       {/* ============================== 1. HERO SLIDER ============================== */}
-      <section className="relative h-screen min-h-[520px] max-h-[760px] flex items-center overflow-hidden">
+      <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden">
         {heroSlides.map((slide, idx) => (
           <img
             key={idx}
@@ -254,7 +268,7 @@ export default function InteriorRenovationPage() {
             className={`absolute inset-0 w-full h-full object-cover hero-slide-fade ${heroSlide === idx ? 'opacity-100' : 'opacity-0'}`}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/25 to-transparent" />
 
         <div className="relative max-w-[1500px] mx-auto px-6 lg:px-12 w-full z-10">
           <div className="max-w-2xl animate-slideUp" key={heroSlide}>
@@ -778,12 +792,12 @@ export default function InteriorRenovationPage() {
                 onTouchStart={(e) => { onPointerDown(); if (e.touches[0]) handleSliderMove(e.touches[0].clientX); }}
               >
                 <img
-                  src={IMG.living_marble}
+                  src={IMG.after_01}
                   alt="After Interior Renovation Dubai - Royal Track premium luxury finish"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <img
-                  src={IMG.project_2}
+                  src={IMG.before_01}
                   alt="Before Interior Renovation Dubai - original property state"
                   className="absolute inset-0 w-full h-full object-cover"
                   style={{ clipPath: `inset(0 ${100 - beforeAfter}% 0 0)` }}
@@ -856,14 +870,14 @@ export default function InteriorRenovationPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
             {[
-              { img: IMG.dubai_hills, name: 'Dubai Hills' },
-              { img: IMG.arabian_ranches, name: 'Arabian Ranches' },
-              { img: IMG.jvc, name: 'JVC' },
-              { img: IMG.the_valley, name: 'The Valley' },
-              { img: IMG.jumeirah_village, name: 'Jumeirah Village' },
-              { img: IMG.yas_island, name: 'Yas Island' },
-              { img: IMG.al_jurf, name: 'Al Jurf' },
-              { img: IMG.talal_al_ghaf, name: 'Tilal Al Ghaf' },
+              { img: IMG.project_1, name: 'Dubai Hills' },
+              { img: IMG.project_2, name: 'Arabian Ranches' },
+              { img: IMG.project_3, name: 'JVC' },
+              { img: IMG.project_4, name: 'The Valley' },
+              { img: IMG.project_5, name: 'Jumeirah Village' },
+              { img: IMG.project_6, name: 'Yas Island' },
+              { img: IMG.project_7, name: 'Al Jurf' },
+              { img: IMG.project_8, name: 'Tilal Al Ghaf' },
             ].map((area, idx) => (
               <div key={idx} className="relative aspect-[4/3] curved-box overflow-hidden group cursor-pointer">
                 <img
