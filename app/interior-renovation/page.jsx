@@ -52,13 +52,13 @@ const IMG = {
   choose_05: '/images/choose_05.png',
 
   // Projects (all .png)
-  project_1: '/images/project_1.png',
-  project_2: '/images/project_2.png',
+  project_1: '/images/project_1.jpg',
+  project_2: '/images/project_2.jpg',
   project_3: '/images/project_3.png',
   project_4: '/images/project_4.png',
-  project_5: '/images/project_5.png',
-  project_6: '/images/project_6.png',
-  project_7: '/images/project_7.png',
+  project_5: '/images/project_5.jpg',
+  project_6: '/images/project_6.jpg',
+  project_7: '/images/project_7.jpg',
   project_8: '/images/project_8.png',
   project_9: '/images/project_9.png',
 
@@ -67,11 +67,11 @@ const IMG = {
   before_01: '/images/before_01.png',
 
   // Benefits section
-  benefits_1: '/images/Services_1.png',
-  benefits_2: '/images/Services_2.png',
-  benefits_3: '/images/Services_3.png',
-  benefits_4: '/images/Services_4.png',
-  benefits_5: '/images/Services_5.png',
+  benefits_1: '/images/services_1.png',
+  benefits_2: '/images/services_2.png',
+  benefits_3: '/images/services_3.png',
+  benefits_4: '/images/services_4.png',
+  benefits_5: '/images/services_5.png',
 
   // Areas (existing)
   dubai_hills: '/images/dubai_hills.png',
