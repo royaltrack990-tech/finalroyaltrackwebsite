@@ -163,18 +163,14 @@ export default function RoyalTrackHome() {
         <div className="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-12 w-full" key={`content-${animKey}`}>
           <div className="max-w-4xl">
 
-            {/* Location tag */}
-            <div className="sr-location flex items-center gap-3 mb-6">
-              <div className="w-10 h-px bg-[#E8B92C]" />
-              <span className="text-[#E8B92C] text-xs font-bold uppercase tracking-[0.35em]">{s.location}</span>
-            </div>
+            
 
             {/* TITLE — line-by-line reveal (Slider Revolution signature effect) */}
             <h1 className="font-display text-white mb-2 font-bold leading-[1.05]">
-              <div className="sr-line1 text-4xl md:text-7xl lg:text-8xl xl:text-9xl">
+              <div className="sr-line1 text-3xl md:text-5xl lg:text-6xl">
                 <span>{s.line1}</span>
               </div>
-              <div className="sr-line2 text-4xl md:text-7xl lg:text-8xl xl:text-9xl">
+              <div className="sr-line2 text-3xl md:text-5xl lg:text-6xl">
                 <span className="gold-gradient">{s.line2}</span>
               </div>
             </h1>
@@ -249,7 +245,7 @@ export default function RoyalTrackHome() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={social.name}
-              className="w-9 h-9 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white/80 hover:text-[#E8B92C] hover:bg-white/25 hover:border-[#E8B92C] transition-all duration-200"
+              className="w-9 h-9 rounded-full bg-stone-900/80 border border-stone-700 flex items-center justify-center text-white hover:text-[#E8B92C] hover:border-[#E8B92C] transition-all duration-200"
             >
               {social.icon}
             </a>
