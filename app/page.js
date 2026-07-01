@@ -133,12 +133,7 @@ export default function RoyalTrackHome() {
         .sr-divider { transform-origin: left; transform: scaleX(0); animation: lineExpand 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards; }
       `}</style>
 
-      {/* Social icons */}
-      <div className="fixed top-[130px] right-6 lg:right-12 z-30 hidden md:flex items-center gap-3 bg-stone-900/70 backdrop-blur-sm px-4 py-2.5 rounded-full">
-        {socialLinks.map((social) => (
-          <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.name} className="text-white/80 hover:text-[#E8B92C] transition-all duration-200 hover:scale-110">{social.icon}</a>
-        ))}
-      </div>
+      
 
       {/* ============================== HERO — SLIDER REVOLUTION STYLE ============================== */}
       <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden bg-stone-900">
