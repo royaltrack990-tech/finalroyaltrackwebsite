@@ -240,11 +240,20 @@ export default function RoyalTrackHome() {
           </div>
         </div>
 
-        {/* Vertical text — right side (Slider Revolution touch) */}
-        <div className="absolute right-6 lg:right-12 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
-          <div className="text-white/20 text-[10px] font-bold uppercase tracking-[0.5em] whitespace-nowrap" style={{ writingMode: 'vertical-rl' }}>
-            Royal Track Building & Contracting
-          </div>
+        {/* Social icons — inside slider, right side */}
+        <div className="absolute top-1/2 -translate-y-1/2 right-4 lg:right-10 z-10 flex flex-col items-center gap-2.5">
+          {socialLinks.map((social) => (
+            <a
+              key={social.name}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.name}
+              className="w-9 h-9 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white/80 hover:text-[#E8B92C] hover:bg-white/25 hover:border-[#E8B92C] transition-all duration-200"
+            >
+              {social.icon}
+            </a>
+          ))}
         </div>
       </section>
 
