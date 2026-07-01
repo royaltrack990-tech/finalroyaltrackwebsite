@@ -48,15 +48,15 @@ const IMG = {
   about_uss: '/images/about_uss.jpg',
   // Services features
   feature_1: '/images/feature_1.png',
-  feature_2: '/images/feature_2.png',
+  feature_2: '/images/feature_2.jpg',
   feature_3: '/images/feature_3.png',
   // Projects
   interior_1: '/images/interior_1.png',
-  interior_2: '/images/interior_2.png',
-  interior_3: '/images/interior_3.png',
+  interior_2: '/images/interior_2.jpg',
+  interior_3: '/images/interior_3.jpg',
   exterior_1: '/images/exterior_1.png',
   exterior_2: '/images/exterior_2.png',
-  exterior_3: '/images/exterior_3.png',
+  exterior_3: '/images/exterior_3.jpg',
 };
 
 export default function RoyalTrackHome() {
@@ -147,6 +147,22 @@ export default function RoyalTrackHome() {
       `}</style>
 
       
+
+      {/* FIXED STICKY SOCIAL ICONS — visible on entire page */}
+      <div className="fixed top-1/2 -translate-y-1/2 right-4 lg:right-8 z-30 flex flex-col items-center gap-2.5">
+        {socialLinks.map((social) => (
+          <a
+            key={social.name}
+            href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={social.name}
+            className="w-9 h-9 rounded-full bg-stone-900/80 border border-stone-700 flex items-center justify-center text-white hover:text-[#E8B92C] hover:border-[#E8B92C] transition-all duration-200"
+          >
+            {social.icon}
+          </a>
+        ))}
+      </div>
 
       {/* ============================== HERO — SLIDER REVOLUTION STYLE ============================== */}
       <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden bg-stone-900">
@@ -249,21 +265,7 @@ export default function RoyalTrackHome() {
           </div>
         </div>
 
-        {/* Social icons — inside slider, right side */}
-        <div className="absolute top-1/2 -translate-y-1/2 right-4 lg:right-10 z-10 flex flex-col items-center gap-2.5">
-          {socialLinks.map((social) => (
-            <a
-              key={social.name}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={social.name}
-              className="w-9 h-9 rounded-full bg-stone-900/80 border border-stone-700 flex items-center justify-center text-white hover:text-[#E8B92C] hover:border-[#E8B92C] transition-all duration-200"
-            >
-              {social.icon}
-            </a>
-          ))}
-        </div>
+
       </section>
 
       {/* ===== REST OF PAGE (unchanged) ===== */}
