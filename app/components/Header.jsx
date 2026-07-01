@@ -193,8 +193,6 @@ export default function Header() {
         )}
       </nav>
 
-      {/* Spacer */}
-      <div className="h-[80px]" />
     </>
   );
 }
