@@ -45,18 +45,18 @@ const IMG = {
   hero_palm: '/images/palm_jumeirah.png',
   hero_warqa: '/images/warqa_1.png',
   // About
-  about_uss: '/images/about_uss.jpg',
+  about_uss: '/images/about_uss.png',
   // Services features
   feature_1: '/images/feature_1.png',
-  feature_2: '/images/feature_2.jpg',
+  feature_2: '/images/feature_2.webp',
   feature_3: '/images/feature_3.png',
   // Projects
   interior_1: '/images/interior_1.png',
-  interior_2: '/images/interior_2.jpg',
+  interior_2: '/images/interior_2.webp',
   interior_3: '/images/interior_3.jpg',
   exterior_1: '/images/exterior_1.png',
   exterior_2: '/images/exterior_2.png',
-  exterior_3: '/images/exterior_3.jpg',
+  exterior_3: '/images/exterior_3.jpeg',
 };
 
 export default function RoyalTrackHome() {
