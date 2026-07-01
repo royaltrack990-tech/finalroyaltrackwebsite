@@ -52,7 +52,7 @@ const IMG = {
   feature_3: '/images/feature_3.png',
   // Projects
   interior_1: '/images/interior_1.png',
-  interior_2: '/images/interior_2.webp',
+  interior_02: '/images/interior_02.png',
   interior_3: '/images/interior_3.jpg',
   exterior_1: '/images/exterior_1.png',
   exterior_2: '/images/exterior_2.png',
@@ -362,7 +362,7 @@ export default function RoyalTrackHome() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
             {[
               { name: 'Modern Living', image: IMG.interior_1 },
-              { name: 'Elegant Dining', image: IMG.interior_2 },
+              { name: 'Elegant Dining', image: IMG.interior_02 },
               { name: 'Luxury Suite', image: IMG.interior_3 },
               { name: 'Villa Paradise', image: IMG.exterior_1 },
               { name: 'Pool Haven', image: IMG.exterior_2 },
