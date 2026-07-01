@@ -135,22 +135,6 @@ export default function Header() {
 
           {/* RIGHT — Social icons + Contact button */}
           <div className="hidden lg:flex items-center gap-4">
-            {/* Social icons - subtle */}
-            <div className="flex items-center gap-1.5">
-              {socialLinks.slice(1, 4).map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.name}
-                  className="w-8 h-8 rounded-full flex items-center justify-center text-stone-400 hover:text-[#C9831A] hover:bg-stone-100 transition-all duration-200"
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
-
             <Link
               href="/#contact"
               className="px-5 py-2 bg-stone-900 hover:bg-[#C9831A] text-white text-[12px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 hover:shadow-lg"
