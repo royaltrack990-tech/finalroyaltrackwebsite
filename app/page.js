@@ -44,6 +44,19 @@ const IMG = {
   hero_jumeirah: '/images/jumeirah_island.png',
   hero_palm: '/images/palm_jumeirah.png',
   hero_warqa: '/images/warqa_1.png',
+  // About
+  about_uss: '/images/about_uss.jpg',
+  // Services features
+  feature_1: '/images/feature_1.png',
+  feature_2: '/images/feature_2.png',
+  feature_3: '/images/feature_3.png',
+  // Projects
+  interior_1: '/images/interior_1.png',
+  interior_2: '/images/interior_2.png',
+  interior_3: '/images/interior_3.png',
+  exterior_1: '/images/exterior_1.png',
+  exterior_2: '/images/exterior_2.png',
+  exterior_3: '/images/exterior_3.png',
 };
 
 export default function RoyalTrackHome() {
@@ -263,7 +276,7 @@ export default function RoyalTrackHome() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="curved-box overflow-hidden shadow-2xl">
-              <img src={IMG.kitchen_marble} alt="Royal Track premium interior fit-out craftsmanship in Dubai" className="w-full aspect-[4/5] object-cover" />
+              <img src={IMG.about_uss} alt="Royal Track premium interior fit-out craftsmanship in Dubai" className="w-full aspect-[4/5] object-cover" />
             </div>
             <div className="p-8">
               <p className="text-stone-700 text-lg leading-relaxed mb-6">At <strong className="text-stone-900">Royal Track Building & Contracting L.L.C</strong>, a proud subsidiary of <a href="https://royal-techgroup.com/" target="_blank" rel="noopener noreferrer" className="text-[#E8B92C] font-bold hover:text-[#C9831A] underline transition-colors">Royal Tech Group</a>, we don't just build structures. We create spaces that define modern living and luxury across Dubai and the UAE.</p>
@@ -282,9 +295,9 @@ export default function RoyalTrackHome() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: 'Interior Fit-Out', desc: 'Complete interior solutions with high-quality detailing.', image: IMG.kitchen_gold },
-              { title: 'Pools & Landscaping', desc: 'Professional design and construction of pools and landscapes.', image: IMG.pool_landscape },
-              { title: 'Turnkey Solutions', desc: 'End-to-end project execution from planning to delivery.', image: IMG.turnkey },
+              { title: 'Interior Fit-Out', desc: 'Complete interior solutions with high-quality detailing.', image: IMG.feature_1 },
+              { title: 'Pools & Landscaping', desc: 'Professional design and construction of pools and landscapes.', image: IMG.feature_2 },
+              { title: 'Turnkey Solutions', desc: 'End-to-end project execution from planning to delivery.', image: IMG.feature_3 },
             ].map((service) => (
               <div key={service.title} className="curved-box bg-white border border-stone-200 hover:border-[#E8B92C] hover:shadow-2xl transition-all duration-500 hover-lift">
                 <div className="aspect-[4/3] overflow-hidden"><img src={service.image} alt={service.title} className="w-full h-full object-cover" /></div>
@@ -346,14 +359,14 @@ export default function RoyalTrackHome() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
             {[
-              { name: 'Dubai Hills', image: IMG.dubai_hills },
-              { name: 'Arabian Ranches', image: IMG.arabian_ranches },
-              { name: 'The Valley', image: IMG.the_valley },
-              { name: 'Tilal Al Ghaf', image: IMG.tilal_al_ghaf },
-              { name: 'Al Jurf', image: IMG.al_jurf },
-              { name: 'Yas Island', image: IMG.yas_island },
+              { name: 'Modern Living', image: IMG.interior_1 },
+              { name: 'Elegant Dining', image: IMG.interior_2 },
+              { name: 'Luxury Suite', image: IMG.interior_3 },
+              { name: 'Villa Paradise', image: IMG.exterior_1 },
+              { name: 'Pool Haven', image: IMG.exterior_2 },
+              { name: 'Sunset Estate', image: IMG.exterior_3 },
             ].map((project) => (
-              <div key={project.name} className="relative overflow-hidden curved-box aspect-[4/3] hover-lift"><img src={project.image} alt={`Royal Track construction project in ${project.name}`} className="w-full h-full object-cover" /><div className="absolute inset-0 bg-gradient-to-t from-stone-900 to-transparent" /><div className="absolute bottom-0 left-0 right-0 p-6"><div className="font-display text-2xl text-white">{project.name}</div></div></div>
+              <div key={project.name} className="relative overflow-hidden curved-box aspect-[4/3] hover-lift"><img src={project.image} alt={`Royal Track - ${project.name}`} className="w-full h-full object-cover" /><div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/40 to-transparent"><div className="font-display text-xl text-white">{project.name}</div></div></div>
             ))}
           </div>
           <div className="text-center"><Link href="/projects" className="inline-flex items-center gap-3 px-8 py-4 bg-stone-900 hover:bg-[#E8B92C] hover:text-stone-900 text-white text-sm font-bold uppercase tracking-wider rounded-full">VIEW ALL PROJECTS →</Link></div>
