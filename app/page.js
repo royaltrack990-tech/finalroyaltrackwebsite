@@ -37,18 +37,22 @@ const IMG = {
   royal_tech_ofs: '/images/Royal_Tech_1.png',
   royal_tech_ogt: '/images/Royal_Track_02.png',
   royal_tech_igt: '/images/Royal_Track_3.png',
+  // Hero
   hero_abu_dhabi: '/images/abu_dhabi.png',
   hero_damac: '/images/damac_hills.png',
   hero_dubai: '/images/dubai_hills.png',
   hero_jumeirah: '/images/jumeirah_island.png',
   hero_palm: '/images/palm_jumeirah.png',
   hero_warqa: '/images/warqa_1.png',
+  // About
   about_uss: '/images/about_uss.png',
+  // Services features
   feature_1: '/images/feature_1.png',
   feature_2: '/images/feature_2.webp',
   feature_3: '/images/feature_3.png',
+  // Projects
   interior_1: '/images/interior_1.png',
-  interior_2: '/images/interior_2.webp',
+  interior_02: '/images/interior_02.png',
   interior_3: '/images/interior_3.jpg',
   exterior_1: '/images/exterior_1.png',
   exterior_2: '/images/exterior_2.png',
@@ -59,15 +63,23 @@ export default function RoyalTrackHome() {
   const [slide, setSlide] = useState(0);
   const [progress, setProgress] = useState(0);
   const [animKey, setAnimKey] = useState(0);
+
   const DURATION = 6000;
 
   const slides = [
-    { imgL: IMG.hero_abu_dhabi, imgR: IMG.hero_jumeirah, num: '01', title: 'Interior', accent: 'Fit-Out', sub: 'Premium Interior Design', desc: 'Bespoke interior design and luxury fit-out across Dubai and UAE.' },
-    { imgL: IMG.hero_damac, imgR: IMG.hero_dubai, num: '02', title: 'Pools &', accent: 'Landscape', sub: 'Outdoor Living Design', desc: 'Luxury pool construction and landscaping for premium villas.' },
-    { imgL: IMG.hero_palm, imgR: IMG.hero_warqa, num: '03', title: 'Turnkey', accent: 'Solutions', sub: 'Complete Construction', desc: 'End-to-end project delivery from concept to handover.' },
+    { image: IMG.hero_abu_dhabi, num: '01', location: 'Abu Dhabi', line1: 'Luxury', line2: 'Interiors', desc: 'Bespoke interior design and fit-out for luxury residences in Abu Dhabi.' },
+    { image: IMG.hero_damac, num: '02', location: 'Damac Hills', line1: 'Dream', line2: 'Villas', desc: 'Premium villa construction and outdoor living solutions in Damac Hills.' },
+    { image: IMG.hero_dubai, num: '03', location: 'Dubai Hills', line1: 'Outdoor', line2: 'Paradise', desc: 'Luxury pools, landscaping and garden design for Dubai Hills estates.' },
+    { image: IMG.hero_jumeirah, num: '04', location: 'Jumeirah Island', line1: 'Kitchen', line2: 'Mastery', desc: 'Premium kitchen fit-out and modern interior craftsmanship.' },
+    { image: IMG.hero_palm, num: '05', location: 'Palm Jumeirah', line1: 'Turnkey', line2: 'Excellence', desc: 'Complete construction solutions from concept to handover.' },
+    { image: IMG.hero_warqa, num: '06', location: 'Al Warqa', line1: 'Outdoor', line2: 'Living', desc: 'Stunning entertaining spaces and landscape design.' },
   ];
 
-  const goTo = useCallback((idx) => { setSlide(idx); setProgress(0); setAnimKey(k => k + 1); }, []);
+  const goTo = useCallback((idx) => {
+    setSlide(idx);
+    setProgress(0);
+    setAnimKey(k => k + 1);
+  }, []);
 
   useEffect(() => {
     const start = Date.now();
@@ -92,94 +104,172 @@ export default function RoyalTrackHome() {
         .hover-lift { transition: transform 0.4s ease; }
         .hover-lift:hover { transform: translateY(-10px); }
 
-        @keyframes aImgL { 0%{opacity:0;transform:translateX(-40px) scale(1.05)} 100%{opacity:1;transform:translateX(0) scale(1)} }
-        @keyframes aImgR { 0%{opacity:0;transform:translateX(40px) scale(1.05)} 100%{opacity:1;transform:translateX(0) scale(1)} }
-        @keyframes aUp { 0%{opacity:0;transform:translateY(50px)} 100%{opacity:1;transform:translateY(0)} }
-        @keyframes aNum { 0%{opacity:0;transform:scale(0.85)} 100%{opacity:0.05;transform:scale(1)} }
-        @keyframes aLine { 0%{transform:scaleX(0)} 100%{transform:scaleX(1)} }
-        @keyframes aFade { 0%{opacity:0} 100%{opacity:1} }
+        /* ===== SLIDER REVOLUTION STYLE ANIMATIONS ===== */
+        @keyframes revealUp {
+          0% { transform: translateY(110%); }
+          100% { transform: translateY(0); }
+        }
+        @keyframes revealDown {
+          0% { transform: translateY(-110%); }
+          100% { transform: translateY(0); }
+        }
+        @keyframes fadeSlideRight {
+          0% { opacity: 0; transform: translateX(-60px); }
+          100% { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeSlideUp {
+          0% { opacity: 0; transform: translateY(40px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scaleIn {
+          0% { opacity: 0; transform: scale(0.8); }
+          100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes lineExpand {
+          0% { transform: scaleX(0); }
+          100% { transform: scaleX(1); }
+        }
+        @keyframes numReveal {
+          0% { opacity: 0; transform: translateY(100%) rotateX(90deg); }
+          100% { opacity: 0.06; transform: translateY(0) rotateX(0deg); }
+        }
 
-        .a-imgL{animation:aImgL 1.1s cubic-bezier(.16,1,.3,1) forwards}
-        .a-imgR{opacity:0;animation:aImgR 1.1s cubic-bezier(.16,1,.3,1) .2s forwards}
-        .a-num{opacity:0;animation:aNum 1s cubic-bezier(.16,1,.3,1) .1s forwards}
-        .a-sub{opacity:0;animation:aUp .7s cubic-bezier(.16,1,.3,1) .4s forwards}
-        .a-t1{opacity:0;animation:aUp .8s cubic-bezier(.16,1,.3,1) .55s forwards}
-        .a-t2{opacity:0;animation:aUp .8s cubic-bezier(.16,1,.3,1) .7s forwards}
-        .a-desc{opacity:0;animation:aUp .7s cubic-bezier(.16,1,.3,1) .9s forwards}
-        .a-btn{opacity:0;animation:aFade .6s cubic-bezier(.16,1,.3,1) 1.1s forwards}
-        .a-line{transform-origin:left;transform:scaleX(0);animation:aLine .7s cubic-bezier(.16,1,.3,1) .85s forwards}
+        .sr-num { opacity: 0; animation: numReveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards; }
+        .sr-location { opacity: 0; animation: fadeSlideRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; }
+        .sr-line1 { overflow: hidden; }
+        .sr-line1 > span { display: block; transform: translateY(110%); animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards; }
+        .sr-line2 { overflow: hidden; }
+        .sr-line2 > span { display: block; transform: translateY(110%); animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards; }
+        .sr-desc { opacity: 0; animation: fadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards; }
+        .sr-btn1 { opacity: 0; animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards; }
+        .sr-btn2 { opacity: 0; animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.35s forwards; }
+        .sr-divider { transform-origin: left; transform: scaleX(0); animation: lineExpand 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards; }
       `}</style>
 
-      {/* STICKY SOCIAL ICONS */}
+      
+
+      {/* FIXED STICKY SOCIAL ICONS — visible on entire page */}
       <div className="fixed top-1/2 -translate-y-1/2 right-4 lg:right-8 z-30 flex flex-col items-center gap-2.5">
         {socialLinks.map((social) => (
-          <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.name} className="w-9 h-9 rounded-full bg-stone-900/80 border border-stone-700 flex items-center justify-center text-white hover:text-[#E8B92C] hover:border-[#E8B92C] transition-all duration-200">{social.icon}</a>
+          <a
+            key={social.name}
+            href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={social.name}
+            className="w-9 h-9 rounded-full bg-stone-900/80 border border-stone-700 flex items-center justify-center text-white hover:text-[#E8B92C] hover:border-[#E8B92C] transition-all duration-200"
+          >
+            {social.icon}
+          </a>
         ))}
       </div>
 
-      {/* ====== HERO — ARCHITECTURE SLIDER (2 images + text split) ====== */}
-      <section className="relative h-screen min-h-[650px] bg-stone-100 overflow-hidden">
+      {/* ============================== HERO — SLIDER REVOLUTION STYLE ============================== */}
+      <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden bg-stone-900">
 
-        {/* Giant background number */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none" key={`n${animKey}`}>
-          <span className="a-num font-display text-stone-300 text-[22rem] md:text-[34rem] lg:text-[42rem] font-bold leading-none select-none">{s.num}</span>
+        {/* IMAGES — no zoom, sharp quality */}
+        {slides.map((sl, i) => (
+          <img
+            key={i}
+            src={sl.image}
+            alt={`${sl.location} - Royal Track Construction Dubai`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1800ms] ease-in-out ${i === slide ? 'opacity-100' : 'opacity-0'}`}
+          />
+        ))}
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/15 to-transparent" />
+
+        {/* LARGE BACKGROUND NUMBER — Slider Revolution style */}
+        <div className="absolute inset-0 flex items-center justify-end pointer-events-none overflow-hidden" key={`num-${animKey}`}>
+          <div className="sr-num font-display text-white text-[20rem] md:text-[30rem] lg:text-[40rem] font-bold leading-none -mr-10 md:-mr-20 select-none" style={{ opacity: 0 }}>
+            {s.num}
+          </div>
         </div>
 
-        {/* Main grid */}
-        <div className="relative z-10 h-full max-w-[1500px] mx-auto px-6 lg:px-12 flex items-center pt-16 lg:pt-0" key={`s${animKey}`}>
-          <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+        {/* CONTENT */}
+        <div className="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-12 w-full" key={`content-${animKey}`}>
+          <div className="max-w-4xl">
 
-            {/* LEFT: Images */}
-            <div className="lg:col-span-5 relative order-2 lg:order-1">
-              {/* Large image */}
-              <div className="a-imgL rounded-2xl overflow-hidden shadow-2xl aspect-[3/4]">
-                <img src={s.imgL} alt={`${s.title} ${s.accent} - Royal Track`} className="w-full h-full object-cover" />
+            
+
+            {/* TITLE — line-by-line reveal (Slider Revolution signature effect) */}
+            <h1 className="font-display text-white mb-2 font-bold leading-[1.05]">
+              <div className="sr-line1 text-3xl md:text-5xl lg:text-6xl">
+                <span>{s.line1}</span>
               </div>
-              {/* Small overlapping image */}
-              <div className="a-imgR absolute -bottom-8 -right-4 md:-bottom-10 md:-right-8 w-[48%] rounded-xl overflow-hidden shadow-2xl border-4 border-stone-100 aspect-[4/3]">
-                <img src={s.imgR} alt={`${s.sub} - Royal Track`} className="w-full h-full object-cover" />
+              <div className="sr-line2 text-3xl md:text-5xl lg:text-6xl">
+                <span className="gold-gradient">{s.line2}</span>
               </div>
-            </div>
+            </h1>
 
-            {/* RIGHT: Text */}
-            <div className="lg:col-span-7 lg:pl-8 order-1 lg:order-2">
-              <div className="a-sub flex items-center gap-3 mb-3">
-                <div className="a-line w-10 h-px bg-[#E8B92C]" />
-                <span className="text-[#C9831A] text-[11px] font-bold uppercase tracking-[0.3em]">{s.sub}</span>
-              </div>
+            {/* Animated divider line */}
+            <div className="sr-divider w-24 h-[3px] bg-[#E8B92C] mt-4 mb-6" />
 
-              <h1 className="font-display text-stone-900 font-bold leading-[1.05] mb-3">
-                <span className="a-t1 block text-3xl md:text-5xl lg:text-6xl">{s.title}</span>
-                <span className="a-t2 block text-3xl md:text-5xl lg:text-6xl gold-gradient">{s.accent}</span>
-              </h1>
+            {/* Description */}
+            <p className="sr-desc text-white/80 text-sm md:text-base lg:text-lg font-light max-w-lg leading-relaxed mb-8">
+              {s.desc}
+            </p>
 
-              <div className="a-line w-16 h-[3px] bg-[#E8B92C] mb-5" />
-
-              <p className="a-desc text-stone-600 text-sm md:text-base max-w-md leading-relaxed mb-8">{s.desc}</p>
-
-              <div className="a-btn flex flex-wrap items-center gap-4">
-                <Link href="/services" className="px-7 py-3 bg-stone-900 hover:bg-[#C9831A] text-white text-[11px] font-bold uppercase tracking-wider rounded-full shadow-lg transition-all duration-300">Discover More →</Link>
-                <a href="#contact" className="px-7 py-3 border-2 border-stone-300 text-stone-700 hover:border-[#E8B92C] hover:text-[#C9831A] text-[11px] font-bold uppercase tracking-wider rounded-full transition-all duration-300">Get In Touch</a>
-              </div>
+            {/* Buttons */}
+            <div className="flex flex-wrap items-center gap-4">
+              <Link href="/services" className="sr-btn1 px-7 py-3.5 bg-[#E8B92C] hover:bg-[#C9831A] text-stone-900 text-xs font-bold uppercase tracking-wider rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                Explore Services →
+              </Link>
+              <a href="#contact" className="sr-btn2 px-7 py-3.5 border-2 border-white/60 text-white hover:bg-white hover:text-stone-900 text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300">
+                Get In Touch
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Bottom nav */}
+        {/* BOTTOM NAV BAR */}
         <div className="absolute bottom-0 left-0 right-0 z-20">
-          <div className="h-[2px] bg-stone-200 w-full"><div className="h-full bg-[#E8B92C]" style={{width:`${progress}%`,transition:'width 0.1s linear'}}/></div>
-          <div className="max-w-[1500px] mx-auto px-6 lg:px-12 py-3.5 flex items-center justify-between bg-white/70 backdrop-blur-sm">
-            <div className="font-display"><span className="text-xl font-bold text-[#C9831A]">{s.num}</span><span className="text-stone-400 mx-2 text-xs">/</span><span className="text-stone-400 text-xs">{String(slides.length).padStart(2,'0')}</span></div>
-            <div className="flex items-center gap-2">{slides.map((_,i)=>(<button key={i} onClick={()=>goTo(i)} aria-label={`Slide ${i+1}`} className={`h-1 rounded-full transition-all duration-500 ${i===slide?'w-12 bg-[#E8B92C]':'w-5 bg-stone-300 hover:bg-stone-400'}`}/>))}</div>
-            <div className="flex items-center gap-2">
-              <button onClick={()=>goTo((slide-1+slides.length)%slides.length)} className="w-9 h-9 rounded-full border border-stone-300 flex items-center justify-center text-stone-500 hover:border-[#E8B92C] hover:text-[#C9831A] transition-all" aria-label="Previous"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6"/></svg></button>
-              <button onClick={()=>goTo((slide+1)%slides.length)} className="w-9 h-9 rounded-full border border-stone-300 flex items-center justify-center text-stone-500 hover:border-[#E8B92C] hover:text-[#C9831A] transition-all" aria-label="Next"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6"/></svg></button>
+          {/* Progress */}
+          <div className="h-[2px] bg-white/10 w-full">
+            <div className="h-full bg-[#E8B92C]" style={{ width: `${progress}%`, transition: 'width 0.1s linear' }} />
+          </div>
+
+          <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+            {/* Counter */}
+            <div className="font-display text-white">
+              <span className="text-2xl font-bold text-[#E8B92C]">{s.num}</span>
+              <span className="text-white/40 mx-2 text-sm">/</span>
+              <span className="text-white/40 text-sm">{String(slides.length).padStart(2, '0')}</span>
+            </div>
+
+            {/* Slide thumbnails / dots */}
+            <div className="hidden md:flex items-center gap-1.5">
+              {slides.map((sl, i) => (
+                <button
+                  key={i}
+                  onClick={() => goTo(i)}
+                  aria-label={sl.location}
+                  className={`relative h-1 rounded-full transition-all duration-500 ${
+                    i === slide ? 'w-14 bg-[#E8B92C]' : 'w-5 bg-white/20 hover:bg-white/40'
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* Arrows */}
+            <div className="flex items-center gap-3">
+              <button onClick={() => goTo((slide - 1 + slides.length) % slides.length)} className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white/50 hover:border-[#E8B92C] hover:text-[#E8B92C] transition-all duration-300" aria-label="Previous">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <button onClick={() => goTo((slide + 1) % slides.length)} className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white/50 hover:border-[#E8B92C] hover:text-[#E8B92C] transition-all duration-300" aria-label="Next">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
             </div>
           </div>
         </div>
+
+
       </section>
 
-      {/* ===== ABOUT ===== */}
+      {/* ===== REST OF PAGE (unchanged) ===== */}
+
       <section className="py-20 bg-stone-50">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-12">
@@ -199,7 +289,6 @@ export default function RoyalTrackHome() {
         </div>
       </section>
 
-      {/* ===== SERVICES ===== */}
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
@@ -222,7 +311,6 @@ export default function RoyalTrackHome() {
         </div>
       </section>
 
-      {/* ===== WHY CHOOSE ===== */}
       <section className="py-20 bg-stone-50">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
@@ -245,7 +333,6 @@ export default function RoyalTrackHome() {
         </div>
       </section>
 
-      {/* ===== PROCESS ===== */}
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
@@ -266,7 +353,6 @@ export default function RoyalTrackHome() {
         </div>
       </section>
 
-      {/* ===== PROJECTS ===== */}
       <section className="py-20 bg-stone-50">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
@@ -276,7 +362,7 @@ export default function RoyalTrackHome() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
             {[
               { name: 'Modern Living', image: IMG.interior_1 },
-              { name: 'Elegant Dining', image: IMG.interior_2 },
+              { name: 'Elegant Dining', image: IMG.interior_02 },
               { name: 'Luxury Suite', image: IMG.interior_3 },
               { name: 'Villa Paradise', image: IMG.exterior_1 },
               { name: 'Pool Haven', image: IMG.exterior_2 },
@@ -289,7 +375,6 @@ export default function RoyalTrackHome() {
         </div>
       </section>
 
-      {/* ===== TESTIMONIALS ===== */}
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
