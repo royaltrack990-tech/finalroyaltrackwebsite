@@ -30,6 +30,21 @@ export default function RootLayout({ children }) {
         </Script>
         {/* End Google Tag Manager */}
 
+        {/* Google Analytics 4 */}
+        <Script 
+          src="https://www.googletagmanager.com/gtag/js?id=G-YWDW7RX57L"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YWDW7RX57L');
+          `}
+        </Script>
+        {/* End Google Analytics 4 */}
+
         {/* Meta Pixel Code */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
