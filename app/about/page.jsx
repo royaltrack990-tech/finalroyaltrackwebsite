@@ -1,6 +1,4 @@
-'use client';
-
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import InquiryForm from '../components/InquiryForm';
 
@@ -22,30 +20,6 @@ const IMG = {
 export default function About() {
   return (
     <div className="bg-stone-50 text-stone-900 overflow-x-hidden">
-      <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .font-display { font-family: 'Playfair Display', serif; }
-        .gold-gradient {
-          background: linear-gradient(135deg, #F5D547 0%, #E8B92C 50%, #C9831A 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-        }
-        @keyframes scroll-continuous {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-33.333%); }
-        }
-        .animate-scroll-continuous {
-          animation: scroll-continuous 15s linear infinite;
-        }
-        @media (max-width: 768px) {
-          .animate-scroll-continuous {
-            animation: scroll-continuous 12s linear infinite;
-          }
-        }
-      `}</style>
-
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-b from-stone-900 to-stone-50 text-white">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 text-center">

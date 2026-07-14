@@ -1,5 +1,3 @@
-'use client';
-
 import React from "react";
 import Link from "next/link";
 import InquiryForm from '../components/InquiryForm';
@@ -24,26 +22,6 @@ export default function Projects() {
 
   return (
     <div className="bg-stone-50 text-stone-900 overflow-x-hidden">
-      <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .font-display { font-family: 'Playfair Display', serif; }
-        .gold-gradient {
-          background: linear-gradient(135deg, #F5D547 0%, #E8B92C 50%, #C9831A 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-        }
-        .curved-box {
-          border-radius: 16px;
-        }
-        .hover-lift {
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .hover-lift:hover {
-          transform: translateY(-8px);
-        }
-      `}</style>
 
       {/* Hero */}
       <section className="relative py-20 bg-gradient-to-b from-stone-900 to-stone-50 text-white">
