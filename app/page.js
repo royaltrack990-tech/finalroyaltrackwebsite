@@ -132,7 +132,7 @@ export default function Home() {
               BUILDING BEYOND EXPECTATIONS
             </span>
             <h2 className="font-display text-4xl md:text-5xl text-stone-900 mt-4">
-              Where Vision Meets <span className="gold-gradient">Precision</span>
+              Crafting Excellence with <span className="gold-gradient">Every Detail</span>
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
