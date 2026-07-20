@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import InquiryForm from '../components/InquiryForm';
+import SocialIcons from '../components/SocialIcons';
 
 /**
  * INTERIOR RENOVATION DUBAI - Royal Track Building & Contracting LLC
@@ -258,6 +259,7 @@ export default function InteriorRenovationPage() {
         .circ-progress { transform: rotate(-90deg); }
       `}</style>
 
+      <SocialIcons />
       {/* ============================== 1. HERO SLIDER ============================== */}
       <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden">
         {heroSlides.map((slide, idx) => (
