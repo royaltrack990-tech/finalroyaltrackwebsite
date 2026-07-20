@@ -1,0 +1,21 @@
+export const metadata = {
+  title: 'Exterior Renovation, Pool Construction & Landscaping Dubai | Royal Track',
+  description: 'Premium exterior renovation, swimming pool construction, and landscaping Dubai by Royal Track. Villa facade, cladding, infinity pools, garden design, hardscaping, irrigation & outdoor living. Free consultation. Call +971 4 393 4374.',
+  keywords: 'exterior renovation Dubai, pool construction Dubai, landscaping Dubai, swimming pool Dubai, garden design Dubai, villa exterior Dubai, facade renovation Dubai, pool builder Dubai, landscape contractor Dubai, infinity pool Dubai, hardscaping Dubai, softscaping Dubai, irrigation Dubai, pergola Dubai, outdoor renovation Dubai, exterior cladding Dubai, pool tiling Dubai, waterproofing Dubai, boundary walls Dubai, outdoor kitchen Dubai, exterior lighting Dubai, plants supply Dubai, garden maintenance Dubai',
+  openGraph: { title: 'Exterior Renovation, Pool Construction & Landscaping Dubai | Royal Track', description: 'Transform your outdoor spaces — exterior renovation, pool construction & landscaping by Royal Track Dubai.', url: 'https://royaltrack.ae/outdoor-services', siteName: 'Royal Track', locale: 'en_AE', type: 'website' },
+  alternates: { canonical: 'https://royaltrack.ae/outdoor-services' },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
+};
+export default function Layout({ children }) {
+  const s1 = { '@context':'https://schema.org','@type':'Service',serviceType:'Exterior Renovation',provider:{'@type':'LocalBusiness',name:'Royal Track Building & Contracting LLC',telephone:'+97143934374',address:{'@type':'PostalAddress',addressLocality:'Dubai',addressCountry:'AE'}},areaServed:{'@type':'Country',name:'UAE'},url:'https://royaltrack.ae/outdoor-services' };
+  const s2 = { '@context':'https://schema.org','@type':'Service',serviceType:'Pool Construction',provider:{'@type':'LocalBusiness',name:'Royal Track Building & Contracting LLC',telephone:'+97143934374'},areaServed:{'@type':'Country',name:'UAE'},url:'https://royaltrack.ae/outdoor-services' };
+  const s3 = { '@context':'https://schema.org','@type':'Service',serviceType:'Landscaping',provider:{'@type':'LocalBusiness',name:'Royal Track Building & Contracting LLC',telephone:'+97143934374'},areaServed:{'@type':'Country',name:'UAE'},url:'https://royaltrack.ae/outdoor-services' };
+  const faq = {'@context':'https://schema.org','@type':'FAQPage',mainEntity:[
+    {'@type':'Question',name:'How much does exterior renovation cost in Dubai?',acceptedAnswer:{'@type':'Answer',text:'Exterior renovation in Dubai ranges from AED 30,000 for painting to AED 500,000+ for complete villa makeovers with cladding, waterproofing, and structural changes.'}},
+    {'@type':'Question',name:'How much does pool construction cost in Dubai?',acceptedAnswer:{'@type':'Answer',text:'Pool construction in Dubai ranges from AED 80,000 for plunge pools to AED 500,000+ for luxury infinity pools with landscaping.'}},
+    {'@type':'Question',name:'How much does landscaping cost in Dubai?',acceptedAnswer:{'@type':'Answer',text:'Landscaping in Dubai ranges from AED 50,000 for basic garden design to AED 300,000+ for complete villa landscaping with hardscaping, irrigation, and lighting.'}},
+    {'@type':'Question',name:'Does Royal Track handle permits?',acceptedAnswer:{'@type':'Answer',text:'Yes, Royal Track handles all Dubai Municipality permits, community NOCs, and approvals for exterior renovation, pool construction, and landscaping projects.'}},
+    {'@type':'Question',name:'What warranty does Royal Track offer?',acceptedAnswer:{'@type':'Answer',text:'Royal Track offers 10-year structural warranty, 5-year waterproofing warranty, and manufacturer warranties on all materials for exterior, pool, and landscaping projects.'}},
+  ]};
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(s1)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(s2)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(s3)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faq)}}/>{children}</>);
+}
