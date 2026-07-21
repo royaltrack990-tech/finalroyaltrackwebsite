@@ -108,7 +108,7 @@ export default function Header() {
                   {serviceItems.map((service) => (
                     <Link
                       key={service}
-                      href={service === 'Interior Renovation' ? '/interior-renovation' : service === 'Turnkey Solutions' ? '/turnkey-solutions' : ['Exterior Renovation','Pool Construction','Landscaping & Gardens'].includes(service) ? '/outdoor-services' : '/services'}
+                      href={service === 'Interior Renovation' ? '/interior-renovation' : service === 'Turnkey Solutions' ? '/turnkey-solutions' : ['Exterior Renovation','Pool Construction','Landscaping & Gardens'].includes(service) ? '/outdoor-services' : ['Aluminum Work','Pergola & Shade Structures'].includes(service) ? '/aluminum-pergola' : '/services'}
                       className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-stone-50 transition-colors group"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-[#E8B92C] flex-shrink-0" />
@@ -168,7 +168,7 @@ export default function Header() {
                   {serviceItems.map((service) => (
                     <Link
                       key={service}
-                      href={service === 'Interior Renovation' ? '/interior-renovation' : service === 'Turnkey Solutions' ? '/turnkey-solutions' : ['Exterior Renovation','Pool Construction','Landscaping & Gardens'].includes(service) ? '/outdoor-services' : '/services'}
+                      href={service === 'Interior Renovation' ? '/interior-renovation' : service === 'Turnkey Solutions' ? '/turnkey-solutions' : ['Exterior Renovation','Pool Construction','Landscaping & Gardens'].includes(service) ? '/outdoor-services' : ['Aluminum Work','Pergola & Shade Structures'].includes(service) ? '/aluminum-pergola' : '/services'}
                       onClick={() => setMobileMenuOpen(false)}
                       className="flex items-center gap-2 text-stone-500 text-[13px] py-1 hover:text-[#C9831A]"
                     >
