@@ -18,31 +18,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Google Tag Manager */}
+       
+
+        {/* Google Analytics 4 */}
        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18171627213"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GFR789KQBP"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'AW-18171627213');
+  gtag('config', 'G-GFR789KQBP');
 </script>
-        {/* End Google Tag Manager */}
-
-        {/* Google Analytics 4 */}
-        <Script 
-          src="https://www.googletagmanager.com/gtag/js?id=G-YWDW7RX57L"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-YWDW7RX57L');
-          `}
-        </Script>
         {/* End Google Analytics 4 */}
 
         {/* Meta Pixel Code */}
