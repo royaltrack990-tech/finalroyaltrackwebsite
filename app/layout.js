@@ -59,16 +59,7 @@ export default function RootLayout({ children }) {
         {/* End Meta Pixel Code */}
       </head>
       <body>
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe 
-            src="https://www.googletagmanager.com/ns.html?id=GTM-TPGT6MHG"
-            height="0" 
-            width="0" 
-            style={{display: 'none', visibility: 'hidden'}}
-          ></iframe>
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
+      
 
         <Header />
         <main>{children}</main>
