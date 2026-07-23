@@ -18,19 +18,35 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-       
-
         {/* Google Analytics 4 */}
-       <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GFR789KQBP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GFR789KQBP');
-</script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-GFR789KQBP"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GFR789KQBP');
+          `}
+        </Script>
         {/* End Google Analytics 4 */}
+
+        {/* Google Ads */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18171627213"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18171627213');
+          `}
+        </Script>
+        {/* End Google Ads */}
 
         {/* Meta Pixel Code */}
         <Script id="meta-pixel" strategy="afterInteractive">
@@ -48,9 +64,9 @@ export default function RootLayout({ children }) {
           `}
         </Script>
         <noscript>
-          <img 
-            height="1" 
-            width="1" 
+          <img
+            height="1"
+            width="1"
             style={{display: 'none'}}
             src="https://www.facebook.com/tr?id=922903900769966&ev=PageView&noscript=1"
             alt="Meta Pixel"
@@ -59,8 +75,6 @@ export default function RootLayout({ children }) {
         {/* End Meta Pixel Code */}
       </head>
       <body>
-      
-
         <Header />
         <main>{children}</main>
         <FloatingButtons />
